@@ -1,5 +1,5 @@
 @import url(fonts.css);
-@import url(media.css);
+@import url(retail-media.css);
 @import "../css/bootstrap.min.css";
 @import "../css/swiper-bundle.min.css";
 @import "../css/bootstrap-reboot.min.css";
@@ -297,6 +297,146 @@ ul {
     margin: 0;
 }
 
+.phone-nav {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    display: none;
+    z-index: 9999999;
+    cursor: pointer;
+
+    .lines {
+        position: relative;
+        top: 0;
+        border-radius: 3px;
+        width: 30px;
+        display: block;
+        height: 2px;
+        transition: all .3s;
+        background: #333;
+        transform-origin: center center;
+    }
+}
+
+.phone-nav .lines {
+    position: relative;
+    top: 0;
+    border-radius: 3px;
+    width: 30px;
+    display: block;
+    height: 2px;
+    transition: all .3s;
+    background: #333;
+    transform-origin: center center;
+}
+
+.phone-nav.active .lines:nth-child(1) {
+    top: 10px;
+    transform: rotate(45deg);
+}
+
+.phone-nav .lines:nth-child(2) {
+    margin: 8px 0;
+}
+
+.phone-nav.active .lines:nth-child(2) {
+    opacity: 0;
+}
+
+.phone-nav.active .lines:nth-child(3) {
+    top: -10px;
+    transform: rotate(-45deg);
+}
+
+.gdt {
+    overflow: auto;
+    display: none;
+}
+
+.phone-nav-mn.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.fade-out {
+    animation: fadeOut 0.5s ease-in-out;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+.phone-nav-mn {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    pointer-events: none;
+    padding: 30px 0 100px;
+    width: 100%;
+    height: calc(100vh - 80px);
+    box-sizing: border-box;
+    background-color: #282a2c;
+    z-index: 99;
+    overflow: scroll;
+    opacity: 0;
+    transition: all .5s;
+
+    .phone-item-link {
+        display: flex;
+
+        .child-item {
+            position: absolute;
+            z-index: -1;
+            display: none;
+            padding-left: 20px;
+
+            .child-block {
+                list-style: none;
+                padding-top: 9px;
+
+                .child-inner {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 9px;
+                }
+            }
+
+            a {
+                color: #FFFFFF;
+            }
+        }
+
+        .btn-link-item {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 9px;
+            padding-left: 20px;
+
+            .btn-phone {
+                color: #FFFFFF;
+                padding: 0;
+                box-shadow: none;
+            }
+
+            a {
+                color: #FFFFFF;
+            }
+        }
+
+        .input-btn-item {
+            display: none;
+        }
+    }
+}
+
 .ul-list {
     margin: 0;
     display: flex;
@@ -307,6 +447,10 @@ ul {
         list-style: none;
         position: relative;
         padding: 13px 0;
+
+        a {
+            color: #000000;
+        }
     }
 }
 
@@ -320,22 +464,18 @@ ul {
     transform: translateX(-50%);
     top: 100%;
     width: 0;
+    z-index: 15;
     height: 1px;
     background: rgb(21, 47, 101);
     transition: all .5s;
     content: "";
-    z-index: 15 ;
-}
-
-.child-bg.border-visible {
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .child-main {
     padding: 12px 0;
     display: none;
     position: relative;
-    z-index: 2;
+    z-index: 3;
     top: 21px;
 
     a {
@@ -364,21 +504,70 @@ ul {
     bottom: 0;
 }
 
+.child-bg.border-visible {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
 .child-bg {
     position: absolute;
     width: 10000px;
     height: 100%;
+    top: 15px;
     left: -4000px;
     background: #fff;
     pointer-events: none;
     z-index: 1;
-    top: 15px;
 }
 
-.banner {
-    background: url("../img/retail-banner.png") no-repeat;
-    height: 700px;
-    background-size: cover;
+
+.slide-banner {
+
+    img {
+        width: 100%;
+    }
+}
+
+.wrapper {
+}
+
+.banner-title {
+    position: absolute;
+    left: 57%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+
+    h1 {
+        color: #FFFFFF;
+        padding-bottom: 8px;
+    }
+
+    p {
+        color: #FFFFFF;
+        line-height: 28px;
+        font-size: 20px;
+        padding-bottom: 24px;
+    }
+}
+
+
+.btn-link {
+    max-width: 171px;
+    width: 100%;
+    padding: 13px 20px;
+    background-color: rgb(21, 47, 101);
+    color: #FFFFFF;
+    box-shadow: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-radius: 0;
+
+    &:hover,
+    &:active,
+    &:focus {
+        text-decoration: none;
+    }
 }
 
 .header {
@@ -396,6 +585,7 @@ ul {
 
 .header-search {
     position: relative;
+    backdrop-filter: blur(30px);
 
     input {
         border-radius: 4px;
@@ -404,19 +594,18 @@ ul {
         padding: 8px 12px 8px 46px;
         max-width: 209px;
         width: 100%;
-        color: #000000;
-        backdrop-filter: blur(30px);
+        color: #000000 !important;
+        opacity: 0.5;
         background: rgba(255, 255, 255, 0.1);
 
         &::placeholder {
-            opacity: 0.5;
             color: #FFFFFF;
             font-family: "Montserrat-Regural", sans-serif;
             line-height: 24px;
         }
     }
 
-    img {
+    svg {
         position: absolute;
         left: 12px;
         top: 8px;
@@ -492,29 +681,23 @@ ul {
     .main-item {
         position: relative;
 
-        img {
-            object-fit: contain;
-        }
-
-        h1 {
+        .main-text {
             position: absolute;
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
             text-align: center;
             width: 100%;
+
+            p {
+                color: #FFFFFF;
+                font-size: 20px;
+                line-height: 28px;
+            }
         }
 
-        p {
-            position: absolute;
-            left: 50%;
-            top: 68%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            width: 100%;
-            color: #FFFFFF;
-            font-size: 20px;
-            line-height: 28px;
+        img {
+            object-fit: contain;
         }
     }
 }

@@ -81,6 +81,21 @@ let swiperiseries = new Swiper('.i-series', {
         el: '.i-series .swiper-pagination',
         clickable: true,
     },
+
+    breakpoints: {
+        0: {
+            slidesPerView: 1
+        },
+        768: {
+            slidesPerView: 2
+        },
+        1024: {
+            slidesPerView: 3
+        },
+        1440: {
+            slidesPerView: 4
+        },
+    }
 });
 
 document.addEventListener("DOMContentLoaded", function () {
