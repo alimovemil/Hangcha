@@ -1,0 +1,107 @@
+@media (max-width: 1440px) {
+    .container {
+        padding: 0 12px !important;
+    }
+
+    .main-meta {
+        .main-content {
+            gap: 16px;
+            overflow: hidden;
+
+            .main-block {
+                .main-img {
+                    max-width: 700px;
+                    width: 100%;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                    }
+                }
+            }
+        }
+    }
+
+    .main-info {
+        .main-open {
+            .main-item {
+                gap: 16px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .banner {
+        .header {
+            .header-item {
+                justify-content: center;
+
+                .phone-nav {
+                    display: block;
+                }
+
+                .ul-list {
+                    display: none;
+                }
+
+                .input-btn {
+                    display: none;
+                }
+
+                .phone-nav {
+                    right: 15px;
+                }
+            }
+
+            .phone-nav-mn {
+                pointer-events: auto;
+                height: calc(100vh - 68px);
+                top: 68px;
+            }
+        }
+
+        .banner-item {
+            .wrapper {
+                .slide-banner {
+                    .banner-title {
+                        h1 {
+                            font-size: 35px;
+                            line-height: 1.2;
+                        }
+
+                        p {
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+
+            .swiper-pagination-item {
+                top: 90%;
+            }
+        }
+    }
+
+    .main-meta {
+        .main-content {
+            .main-block {
+                .main-img {
+                    max-width: 492px;
+                }
+
+                .main-title {
+                    h1 {
+                        font-size: 35px;
+                        line-height: 1.2;
+                    }
+
+                    p {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}

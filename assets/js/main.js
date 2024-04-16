@@ -1,44 +1,17 @@
-document.addEventListener("DOMContentLoaded", function () {
-    let pageLinks = document.querySelectorAll(".page-link");
-
-    pageLinks.forEach(function (link) {
-        link.addEventListener("click", function (event) {
-            event.preventDefault();
-
-            pageLinks.forEach(function (link) {
-                link.parentElement.classList.remove("active");
-                link.style.width = "8px";
-                link.style.height = "8px";
-                link.style.backgroundColor = "white";
-                link.style.borderRadius = "100px";
-                link.style.borderColor = "transparent";
-                link.style.margin = "0px";
-                link.style.opacity = "0.5";
-            });
-
-            this.style.width = "48px";
-            this.style.backgroundColor = "white";
-            this.style.color = "#fff";
-            this.parentElement.classList.add("active");
-            this.style.opacity = "1";
-        });
-    });
-});
-
 let swiperivideo = new Swiper('.i-video', {
-    slidesPerView :'auto',
+    slidesPerView: 'auto',
     spaceBetween: 13,
-    centeredSlides : true,
+    centeredSlides: true,
     centeredSlidesBounds: true,
-    speed:800,
-    loop:true,
+    speed: 800,
+    loop: true,
     navigation: {
         prevEl: '.i-video .i-page.next',
         nextEl: '.i-video .i-page.prev',
     },
-    pagination :{
+    pagination: {
         el: '.i-video .swiper-pagination',
-        clickable :true,
+        clickable: true,
     },
 });
 
@@ -96,17 +69,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 let swiperiseries = new Swiper('.i-series', {
-    slidesPerView : 4,
+    slidesPerView: 4,
     spaceBetween: 0,
-    speed:800,
-    loop:true,
+    speed: 800,
+    loop: true,
     navigation: {
         prevEl: '.i-series .i-page.next',
         nextEl: '.i-series .i-page.prev',
     },
-    pagination :{
+    pagination: {
         el: '.i-series .swiper-pagination',
-        clickable :true,
+        clickable: true,
     },
 });
 
@@ -140,5 +113,147 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+let swiperbanner = new Swiper('.banner-item', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    centeredSlides: true,
+    centeredSlidesBounds: true,
+    speed: 800,
+    loop: true,
+    navigation: {
+        prevEl: '.banner-item .i-page.next',
+        nextEl: '.banner-item .i-page.prev',
+    },
+    pagination: {
+        el: '.banner-item .swiper-pagination',
+        clickable: true,
+    },
+});
 
+document.addEventListener("DOMContentLoaded", function() {
+    let phoneNav = document.querySelector(".phone-nav");
+    let phoneNavMenu = document.querySelector(".phone-nav-mn");
 
+    phoneNav.addEventListener("click", function() {
+        if (phoneNav.classList.contains("active")) {
+            phoneNav.classList.remove("active");
+            phoneNavMenu.style.opacity = 0;
+            phoneNavMenu.style.display = "none";
+        } else {
+            phoneNav.classList.add("active");
+            phoneNavMenu.style.opacity = 1;
+            phoneNavMenu.style.display = "block";
+        }
+    });
+});
+document.addEventListener("DOMContentLoaded", function() {
+    let backButtons = document.querySelector('.phone-item-link .child-item.two .back-btn');
+    let productList = document.querySelector('.phone-item-link .child-item.two');
+    let productButton = document.querySelector('.phone-item-link button:nth-child(2)');
+
+    productButton.addEventListener('click', function() {
+        let buttonList = document.querySelector('.phone-item-link .btn-link-item');
+        buttonList.classList.add('fade-out');
+        setTimeout(function() {
+            buttonList.style.display = 'none';
+            buttonList.classList.remove('fade-out');
+        }, 400);
+
+        productList.style.display = 'block';
+    });
+
+    backButtons.addEventListener('click', function() {
+        productList.classList.add('fade-out');
+        setTimeout(function() {
+            productList.style.display = 'none';
+            productList.classList.remove('fade-out');
+        }, 400);
+
+        let buttonList = document.querySelector('.phone-item-link .btn-link-item');
+        buttonList.style.display = 'flex';
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    let sphereButton = document.querySelector('.phone-item-link button:nth-child(3)');
+    let productList = document.querySelector('.phone-item-link .child-item.two');
+    let backButton = document.querySelector('.phone-item-link .child-item.two a');
+
+    sphereButton.addEventListener('click', function() {
+        let buttonList = document.querySelector('.phone-item-link .btn-link-item');
+        buttonList.classList.add('fade-out');
+        setTimeout(function() {
+            buttonList.style.display = 'none';
+            buttonList.classList.remove('fade-out');
+        }, 400);
+
+        productList.style.display = 'block';
+    });
+
+    backButton.addEventListener('click', function() {
+        productList.classList.add('fade-out');
+        setTimeout(function() {
+            productList.style.display = 'none';
+            productList.classList.remove('fade-out');
+        }, 400);
+
+        let buttonList = document.querySelector('.phone-item-link .btn-link-item');
+        buttonList.style.display = 'flex';
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    let backButtonService = document.querySelector('.phone-item-link .child-item.three a');
+    let productListService = document.querySelector('.phone-item-link .child-item.three');
+    let serviceButton = document.querySelector('.phone-item-link button:nth-child(4)');
+
+    serviceButton.addEventListener('click', function() {
+        let buttonList = document.querySelector('.phone-item-link .btn-link-item');
+        buttonList.classList.add('fade-out');
+        setTimeout(function() {
+            buttonList.style.display = 'none';
+            buttonList.classList.remove('fade-out');
+        }, 400);
+
+        productListService.style.display = 'block';
+    });
+
+    backButtonService.addEventListener('click', function() {
+        productListService.classList.add('fade-out');
+        setTimeout(function() {
+            productListService.style.display = 'none';
+            productListService.classList.remove('fade-out');
+        }, 400);
+
+        let buttonList = document.querySelector('.phone-item-link .btn-link-item');
+        buttonList.style.display = 'flex';
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    let backButtonCompany = document.querySelector('.phone-item-link .child-item.four a');
+    let productListCompany = document.querySelector('.phone-item-link .child-item.four');
+    let companyButton = document.querySelector('.phone-item-link button:nth-child(5)');
+
+    companyButton.addEventListener('click', function() {
+        let buttonList = document.querySelector('.phone-item-link .btn-link-item');
+        buttonList.classList.add('fade-out');
+        setTimeout(function() {
+            buttonList.style.display = 'none';
+            buttonList.classList.remove('fade-out');
+        }, 400);
+
+        productListCompany.style.display = 'block';
+    });
+
+    backButtonCompany.addEventListener('click', function() {
+        productListCompany.classList.add('fade-out');
+        setTimeout(function() {
+            productListCompany.style.display = 'none';
+            productListCompany.classList.remove('fade-out');
+        }, 400);
+
+        let buttonList = document.querySelector('.phone-item-link .btn-link-item');
+        buttonList.style.display = 'flex';
+    });
+});
