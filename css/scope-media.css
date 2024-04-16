@@ -1,0 +1,242 @@
+@media (max-width: 1440px) {
+    .container {
+        padding: 0 12px !important;
+    }
+
+    .section {
+        .main {
+            .main-item {
+                .main-link {
+                    img {
+                        max-width: 456px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .header {
+        .header-item {
+            justify-content: center !important;
+
+            .phone-nav {
+                display: block;
+            }
+
+            .ul-list {
+                display: none;
+            }
+
+            .input-btn {
+                display: none;
+            }
+
+            .phone-nav {
+                right: 15px;
+            }
+        }
+
+        .phone-nav-mn {
+            pointer-events: auto;
+            height: calc(100vh - 68px);
+            top: 68px;
+        }
+    }
+
+    .section {
+        .main {
+            .main-item {
+                gap: 16px;
+
+                .main-link {
+                    img {
+                        max-width: 322px;
+                    }
+
+                    h2 {
+                        font-size: 25px;
+                        line-height: 1.2;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        .main {
+            .main-title {
+                h1 {
+                    font-size: 52px;
+                }
+
+                p br {
+                    display: none;
+                }
+            }
+
+            .main-item {
+                padding-top: 50px;
+
+                .main-link {
+                    img {
+                        max-width: 237px;
+                    }
+
+                    h2 {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+    .footer-meta {
+        .footer {
+            .footer-content {
+                .footer-social {
+                    flex-wrap: wrap;
+                    gap: 10px;
+
+                    .phone {
+                        .phone-item {
+                            a {
+                                font-size: 20px;
+                            }
+                        }
+                    }
+                }
+
+                .footer-block {
+                    .footer-item {
+                        max-width: none;
+
+                        h2 {
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 430px) {
+    .section {
+        .main {
+            .main-title {
+                h1 {
+                    font-size: 42px;
+                    line-height: 1.2;
+                }
+
+                p {
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+            }
+
+            .main-item {
+                .main-link {
+                    img {
+                        max-width: none;
+                    }
+
+                    h2 {
+                        font-size: 35px;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-meta {
+        padding-top: 50px !important;
+
+        .footer {
+            .footer-content {
+                .footer-block {
+                    flex-direction: column;
+                    gap: 15px;
+
+                    .footer-item {
+                        border-bottom: 1px solid rgb(255 255 255);
+                    }
+                }
+
+                .footer-social {
+                    .phone {
+                        flex-direction: column;
+                        align-items: flex-start;
+                        gap: 10px;
+                    }
+                }
+
+                .foot-license {
+                    flex-direction: column;
+                    gap: 10px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 376px) {
+    .section {
+        .main {
+            .main-title {
+                h1 {
+                    font-size: 37px;
+                    line-height: 1.2;
+                }
+
+                p {
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+            }
+
+            .main-item {
+                .main-link {
+                    img {
+                        max-width: none;
+                    }
+
+                    h2 {
+                        font-size: 35px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 320px) {
+    .section {
+        overflow: hidden;
+        .main {
+            .main-title {
+                h1 {
+                    font-size: 32px;
+                    line-height: 1.2;
+                }
+
+                p {
+                    font-size: 14px;
+                    line-height: 20px;
+                }
+            }
+
+            .main-item {
+                .main-link {
+
+
+                    h2 {
+                        font-size: 30px;
+                    }
+                }
+            }
+        }
+    }
+}

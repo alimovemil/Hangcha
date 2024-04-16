@@ -1,5 +1,5 @@
 @import url(fonts.css);
-@import url(media.css);
+@import url(scope-media.css);
 @import "../css/bootstrap.min.css";
 @import "../css/swiper-bundle.min.css";
 @import "../css/bootstrap-reboot.min.css";
@@ -298,8 +298,144 @@ ul {
     margin: 0;
 }
 
-li {
-    list-style: none;
+.phone-nav {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    display: none;
+    z-index: 9999999;
+    cursor: pointer;
+
+    .lines {
+        position: relative;
+        top: 0;
+        border-radius: 3px;
+        width: 30px;
+        display: block;
+        height: 2px;
+        transition: all .3s;
+        background: #333;
+        transform-origin: center center;
+    }
+}
+
+.phone-nav .lines {
+    position: relative;
+    top: 0;
+    border-radius: 3px;
+    width: 30px;
+    display: block;
+    height: 2px;
+    transition: all .3s;
+    background: #333;
+    transform-origin: center center;
+}
+
+.phone-nav.active .lines:nth-child(1) {
+    top: 10px;
+    transform: rotate(45deg);
+}
+
+.phone-nav .lines:nth-child(2) {
+    margin: 8px 0;
+}
+
+.phone-nav.active .lines:nth-child(2) {
+    opacity: 0;
+}
+
+.phone-nav.active .lines:nth-child(3) {
+    top: -10px;
+    transform: rotate(-45deg);
+}
+
+.gdt {
+    overflow: auto;
+    display: none;
+}
+
+.phone-nav-mn.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.fade-out {
+    animation: fadeOut 0.5s ease-in-out;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+.phone-nav-mn {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    pointer-events: none;
+    padding: 30px 0 100px;
+    width: 100%;
+    height: calc(100vh - 80px);
+    box-sizing: border-box;
+    background-color: #282a2c;
+    z-index: 99;
+    overflow: scroll;
+    opacity: 0;
+    transition: all .5s;
+
+    .phone-item-link {
+        display: flex;
+
+        .child-item {
+            position: absolute;
+            z-index: -1;
+            display: none;
+            padding-left: 20px;
+
+            .child-block {
+                list-style: none;
+                padding-top: 9px;
+
+                .child-inner {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 9px;
+                }
+            }
+
+            a {
+                color: #FFFFFF;
+            }
+        }
+
+        .btn-link-item {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 9px;
+            padding-left: 20px;
+
+            .btn-phone {
+                color: #FFFFFF;
+                padding: 0;
+                box-shadow: none;
+            }
+
+            a {
+                color: #FFFFFF;
+            }
+        }
+
+        .input-btn-item {
+            display: none;
+        }
+    }
 }
 
 .ul-list {
@@ -312,6 +448,10 @@ li {
         list-style: none;
         position: relative;
         padding: 13px 0;
+
+        a {
+            color: #000000 !important;
+        }
     }
 }
 
@@ -324,8 +464,8 @@ li {
     left: 50%;
     transform: translateX(-50%);
     top: 100%;
-    z-index: 15;
     width: 0;
+    z-index: 15;
     height: 1px;
     background: rgb(21, 47, 101);
     transition: all .5s;
@@ -336,7 +476,7 @@ li {
     padding: 12px 0;
     display: none;
     position: relative;
-    z-index: 2;
+    z-index: 3;
     top: 21px;
 
     a {
@@ -365,6 +505,10 @@ li {
     bottom: 0;
 }
 
+.child-bg.border-visible {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
 .child-bg {
     position: absolute;
     width: 10000px;
@@ -376,8 +520,55 @@ li {
     z-index: 1;
 }
 
-.child-bg.border-visible {
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
+
+.slide-banner {
+
+    img {
+        width: 100%;
+    }
+}
+
+.wrapper {
+}
+
+.banner-title {
+    position: absolute;
+    left: 57%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+
+    h1 {
+        color: #FFFFFF;
+        padding-bottom: 8px;
+    }
+
+    p {
+        color: #FFFFFF;
+        line-height: 28px;
+        font-size: 20px;
+        padding-bottom: 24px;
+    }
+}
+
+
+.btn-link {
+    max-width: 171px;
+    width: 100%;
+    padding: 13px 20px;
+    background-color: rgb(21, 47, 101);
+    color: #FFFFFF;
+    box-shadow: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-radius: 0;
+
+    &:hover,
+    &:active,
+    &:focus {
+        text-decoration: none;
+    }
 }
 
 .header {
@@ -385,7 +576,7 @@ li {
     width: 100%;
     z-index: 9999;
 
-    .header-item-inner {
+    .header-item {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -400,22 +591,20 @@ li {
         border-radius: 4px;
         border: transparent;
         outline: none;
+        background: rgba(255, 255, 255, 0.1);
         padding: 8px 12px 8px 46px;
         max-width: 209px;
         width: 100%;
-        color: #000000;
-        backdrop-filter: blur(30px);
-        background: rgba(0, 0, 0, 0.1);
+        color: #FFFFFF;
 
         &::placeholder {
-            opacity: 0.5;
-            color: #000000;
+            color: #FFFFFF;
             font-family: "Montserrat-Regural", sans-serif;
             line-height: 24px;
         }
     }
 
-    svg {
+    img {
         position: absolute;
         left: 12px;
         top: 8px;
