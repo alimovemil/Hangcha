@@ -100,10 +100,12 @@ let swiperiseries = new Swiper('.i-series', {
 
 document.addEventListener("DOMContentLoaded", function () {
     const header = document.querySelector(".header");
-    const logo = document.querySelector(".header-item > a > img");
-    const logoOnScroll = "/img/Logo-scope.svg";
     const links = document.querySelectorAll(".ul-list .link-group");
     const searchInput = document.querySelector(".header-search input");
+    const logoImg = document.querySelector(".header-item-img");
+    const logoSvg = document.querySelector(".header-item-svg");
+    const logoScope = document.querySelector(".header-item-logo");
+    const logoScopeImg = document.querySelector(".header-item-scope");
 
     window.addEventListener("scroll", function () {
         if (window.scrollY > 0) {
@@ -114,7 +116,10 @@ document.addEventListener("DOMContentLoaded", function () {
             searchInput.style.borderRadius = "4px";
             searchInput.style.background = "rgba(0, 0, 0, 0.1)";
             searchInput.style.color = "#000000";
-            logo.src = logoOnScroll;
+            logoImg.style.display = "none";
+            logoSvg.style.display = "block";
+            logoScope.style.display = "none"
+            logoScopeImg.style.display = "block"
         } else {
             header.style.backgroundColor = "transparent";
             links.forEach(link => {
@@ -123,10 +128,14 @@ document.addEventListener("DOMContentLoaded", function () {
             searchInput.style.borderRadius = "";
             searchInput.style.background = "";
             searchInput.style.color = "#ffffff";
-            logo.src = "img/Logo.svg";
+            logoImg.style.display = "block";
+            logoSvg.style.display = "none";
+            logoScope.style.display = "block"
+            logoScopeImg.style.display = "none"
         }
     });
 });
+
 
 let swiperbanner = new Swiper('.banner-item', {
     slidesPerView: 1,
