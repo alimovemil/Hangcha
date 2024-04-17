@@ -283,11 +283,13 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 document.addEventListener("DOMContentLoaded", function() {
-    const selectItem = document.querySelector(".decision-select-item");
-    const checkboxBlock = document.querySelector(".decision-checkbox");
+    const selectItems = document.querySelectorAll(".decision-select-item");
+    const checkboxBlocks = document.querySelectorAll(".decision-checkbox");
 
-    selectItem.addEventListener("click", function() {
-        checkboxBlock.classList.toggle("hidden");
+    selectItems.forEach((selectItem, index) => {
+        selectItem.addEventListener("click", function() {
+            checkboxBlocks[index].classList.toggle("hidden");
+        });
     });
 });
 
@@ -295,7 +297,6 @@ let labels = document.querySelectorAll('.label input');
 labels.forEach(function(input) {
     input.addEventListener('click', function() {
         let label = input.parentElement;
-        // Проверяем, есть ли у label класс clicked
         if (label.classList.contains('clicked')) {
             label.classList.remove('clicked');
         } else {
