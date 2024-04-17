@@ -449,7 +449,6 @@ ul {
         padding: 13px 0;
 
         a {
-            color: #000000;
         }
     }
 }
@@ -494,7 +493,7 @@ ul {
         gap: 9px;
 
          a {
-             color: #FFFFFF;
+             color: #000000;
          }
     }
 }
@@ -800,7 +799,6 @@ ul {
         height: 1px;
         background: rgba(0, 0, 0, 0.1);
         margin: 12px 0;
-
     }
 }
 
