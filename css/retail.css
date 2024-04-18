@@ -298,12 +298,7 @@ ul {
 }
 
 .phone-nav {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
     display: none;
-    z-index: 9999999;
     cursor: pointer;
 
     .lines {
@@ -530,9 +525,6 @@ ul {
     }
 }
 
-.wrapper {
-}
-
 .banner-title {
     position: absolute;
     left: 57%;
@@ -555,7 +547,6 @@ ul {
 
 
 .btn-link {
-    max-width: 171px;
     width: 100%;
     padding: 13px 20px;
     background-color: rgb(21, 47, 101);
@@ -565,6 +556,7 @@ ul {
     align-items: center;
     gap: 20px;
     border-radius: 0;
+    max-width: 100%;
 
     &:hover,
     &:active,
@@ -584,8 +576,11 @@ ul {
         justify-content: space-between;
         padding: 15px 0;
 
-        .header-item-svg {
-            display: none;
+        a {
+            svg {
+                width: 89px;
+                height: 50px;
+            }
         }
     }
 }
@@ -602,13 +597,13 @@ ul {
         max-width: 209px;
         width: 100%;
         color: #000000 !important;
-        opacity: 0.5;
         background: rgba(255, 255, 255, 0.1);
 
         &::placeholder {
             color: #FFFFFF;
             font-family: "Montserrat-Regural", sans-serif;
             line-height: 24px;
+            opacity: 0.5;
         }
     }
 

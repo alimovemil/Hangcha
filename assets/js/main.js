@@ -41,32 +41,33 @@ document.addEventListener('DOMContentLoaded', function () {
         let bgBlock = item.querySelector('.child-bg');
         let isHovered = false;
 
-        item.addEventListener('mouseover', function () {
-            hoverBlock.style.display = 'block';
-            bgBlock.style.height = hoverBlock.offsetHeight + 'px';
-            hoverBlock.style.transition = 'opacity 0.5s ease';
-            bgBlock.style.transition = 'height 0.5s ease';
-            hoverBlock.style.opacity = '1';
-            bgBlock.classList.add('border-visible');
-            isHovered = true;
-        });
+        if (hoverBlock && bgBlock) {
+            item.addEventListener('mouseover', function () {
+                hoverBlock.style.display = 'block';
+                bgBlock.style.height = hoverBlock.offsetHeight + 'px';
+                hoverBlock.style.transition = 'opacity 0.5s ease';
+                bgBlock.style.transition = 'height 0.5s ease';
+                hoverBlock.style.opacity = '1';
+                bgBlock.classList.add('border-visible');
+                isHovered = true;
+            });
 
-        item.addEventListener('mouseleave', function () {
-            hoverBlock.style.transition = 'opacity 0.5s ease';
-            bgBlock.style.transition = 'height 0.5s ease';
-            hoverBlock.style.opacity = '0';
-            setTimeout(function () {
-                if (!isHovered) {
-                    hoverBlock.style.display = 'none';
-                    bgBlock.style.height = '0';
-                }
-            }, 500);
-            bgBlock.classList.remove('border-visible');
-            isHovered = false;
-        });
+            item.addEventListener('mouseleave', function () {
+                hoverBlock.style.transition = 'opacity 0.5s ease';
+                bgBlock.style.transition = 'height 0.5s ease';
+                hoverBlock.style.opacity = '0';
+                setTimeout(function () {
+                    if (!isHovered) {
+                        hoverBlock.style.display = 'none';
+                        bgBlock.style.height = '0';
+                    }
+                }, 500);
+                bgBlock.classList.remove('border-visible');
+                isHovered = false;
+            });
+        }
     });
 });
-
 
 let swiperiseries = new Swiper('.i-series', {
     slidesPerView: 4,
@@ -98,44 +99,86 @@ let swiperiseries = new Swiper('.i-series', {
     }
 });
 
+let swipericomfort = new Swiper('.i-comfort', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    speed: 800,
+    loop: true,
+    navigation: {
+        prevEl: '.i-comfort .i-page.next',
+        nextEl: '.i-comfort .i-page.prev',
+    },
+    pagination: {
+        el: '.i-comfort .swiper-pagination',
+        clickable: true,
+    },
+});
+
 document.addEventListener("DOMContentLoaded", function () {
     const header = document.querySelector(".header");
     const links = document.querySelectorAll(".ul-list .link-group");
     const searchInput = document.querySelector(".header-search input");
-    const logoImg = document.querySelector(".header-item-img");
-    const logoSvg = document.querySelector(".header-item-svg");
-    const logoScope = document.querySelector(".header-item-logo");
-    const logoScopeImg = document.querySelector(".header-item-scope");
+
+    if (!header || !searchInput) {
+        return;
+    }
 
     window.addEventListener("scroll", function () {
         if (window.scrollY > 0) {
-            header.style.backgroundColor = "#ffffff";
+            header.style.backgroundColor = "#FFFFFF";
             links.forEach(link => {
                 link.style.color = "#000000";
             });
             searchInput.style.borderRadius = "4px";
             searchInput.style.background = "rgba(0, 0, 0, 0.1)";
             searchInput.style.color = "#000000";
-            logoImg.style.display = "none";
-            logoSvg.style.display = "block";
-            logoScope.style.display = "none"
-            logoScopeImg.style.display = "block"
         } else {
             header.style.backgroundColor = "transparent";
             links.forEach(link => {
-                link.style.color = "#ffffff";
+                link.style.color = "#FFFFFF";
             });
             searchInput.style.borderRadius = "";
             searchInput.style.background = "";
-            searchInput.style.color = "#ffffff";
-            logoImg.style.display = "block";
-            logoSvg.style.display = "none";
-            logoScope.style.display = "block"
-            logoScopeImg.style.display = "none"
+            searchInput.style.color = "#FFFFFF";
         }
     });
 });
 
+
+document.addEventListener("DOMContentLoaded", function () {
+    const headerInner = document.querySelector(".header-inner");
+    const searchInputItem = document.querySelector(".header-search-item input");
+
+    if (headerInner && searchInputItem) {
+        window.addEventListener("scroll", function () {
+            if (window.scrollY > 0) {
+                headerInner.style.backgroundColor = "#ffffff";
+                searchInputItem.style.borderRadius = "4px";
+                searchInputItem.style.background = "rgba(0, 0, 0, 0.1)";
+                searchInputItem.style.color = "#000000";
+            } else {
+                headerInner.style.backgroundColor = "";
+                searchInputItem.style.borderRadius = "";
+                searchInputItem.style.background = "";
+                searchInputItem.style.color = "#ffffff";
+            }
+        });
+    }
+});
+
+window.addEventListener('scroll', function() {
+    let svgElements = document.querySelectorAll('.header-item-img svg .cls-1');
+
+    if (window.scrollY > 0) {
+        svgElements.forEach(element => {
+            element.style.fill = '#1b2e61';
+        });
+    } else {
+        svgElements.forEach(element => {
+            element.style.fill = '#FFFFFF';
+        });
+    }
+});
 
 let swiperbanner = new Swiper('.banner-item', {
     slidesPerView: 1,
@@ -152,6 +195,37 @@ let swiperbanner = new Swiper('.banner-item', {
         el: '.banner-item .swiper-pagination',
         clickable: true,
     },
+});
+
+let swipergallery = new Swiper('.i-gallery', {
+    slidesPerView: 3,
+    spaceBetween: 0,
+    centeredSlides: true,
+    centeredSlidesBounds: true,
+    speed: 800,
+    loop: true,
+    navigation: {
+        prevEl: 'i-gallery .i-page.next',
+        nextEl: '.i-gallery .i-page.prev',
+    },
+    pagination: {
+        el: '.i-gallery .swiper-pagination',
+        clickable: true,
+    },
+    breakpoints: {
+        0: {
+            slidesPerView: 1
+        },
+        768: {
+            slidesPerView: 3
+        },
+        1024: {
+            slidesPerView: 3
+        },
+        1440: {
+            slidesPerView: 3
+        },
+    }
 });
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -171,7 +245,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 document.addEventListener("DOMContentLoaded", function() {
-    let backButtons = document.querySelector('.phone-item-link .child-item.two .back-btn');
     let productList = document.querySelector('.phone-item-link .child-item.two');
     let productButton = document.querySelector('.phone-item-link button:nth-child(2)');
 
@@ -185,18 +258,29 @@ document.addEventListener("DOMContentLoaded", function() {
 
         productList.style.display = 'block';
     });
+});
 
-    backButtons.addEventListener('click', function() {
-        productList.classList.add('fade-out');
-        setTimeout(function() {
-            productList.style.display = 'none';
-            productList.classList.remove('fade-out');
-        }, 400);
+document.addEventListener('DOMContentLoaded', function() {
+    let backButtons = document.querySelectorAll('.child-item a');
 
-        let buttonList = document.querySelector('.phone-item-link .btn-link-item');
-        buttonList.style.display = 'flex';
+    backButtons.forEach(function(button) {
+        button.addEventListener('click', function(event) {
+            event.preventDefault();
+
+            let productList = button.closest('.child-item');
+            productList.classList.add('fade-out');
+
+            setTimeout(function() {
+                productList.style.display = 'none';
+                productList.classList.remove('fade-out');
+            }, 400);
+
+            let buttonList = document.querySelector('.phone-item-link .btn-link-item');
+            buttonList.style.display = 'flex';
+        });
     });
 });
+
 
 document.addEventListener("DOMContentLoaded", function() {
     let sphereButton = document.querySelector('.phone-item-link button:nth-child(3)');
@@ -288,7 +372,24 @@ document.addEventListener("DOMContentLoaded", function() {
 
     selectItems.forEach((selectItem, index) => {
         selectItem.addEventListener("click", function() {
-            checkboxBlocks[index].classList.toggle("hidden");
+            const isOpen = !checkboxBlocks[index].classList.contains("hidden");
+
+            checkboxBlocks.forEach((checkboxBlock, i) => {
+                if (i === index) {
+                    checkboxBlock.classList.toggle("hidden");
+                } else {
+                    checkboxBlock.classList.add("hidden");
+                }
+            });
+
+            const arrowImg = selectItem.querySelector("img");
+            arrowImg.classList.toggle("rotate", !isOpen);
+
+            selectItems.forEach((item, idx) => {
+                if (idx !== index) {
+                    item.querySelector("img").classList.remove("rotate");
+                }
+            });
         });
     });
 });
@@ -305,5 +406,62 @@ labels.forEach(function(input) {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+    const featuresArrows = document.querySelectorAll('.features-arrow');
+    featuresArrows.forEach(function(featuresArrow) {
+        featuresArrow.addEventListener('click', function() {
+            const parentFeaturesInfo = this.closest('.features-info');
+            const featuresSelect = parentFeaturesInfo.querySelector('.features-select');
 
+            const allFeaturesSelects = document.querySelectorAll('.features-select');
+            allFeaturesSelects.forEach(function(select) {
+                if (select !== featuresSelect) {
+                    select.style.display = 'none';
+                }
+            });
 
+            const allFeaturesArrows = document.querySelectorAll('.features-arrow');
+            allFeaturesArrows.forEach(function(arrow) {
+                if (arrow !== featuresArrow) {
+                    arrow.classList.remove('active');
+                }
+            });
+
+            if (!this.classList.contains('active')) {
+                this.classList.add('active');
+                featuresSelect.style.display = 'block';
+            } else {
+                this.classList.remove('active');
+                featuresSelect.style.display = 'none';
+            }
+        });
+    });
+});
+
+function updateText(checkbox) {
+    let label = checkbox.closest('.decision-checkbox').previousElementSibling.querySelector('.decision-select-item span');
+    let selectedItemsText = [];
+
+    let checkboxes = checkbox.closest('.decision-checkbox').querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach(function(cb) {
+        if (cb.checked) {
+            selectedItemsText.push(cb.nextElementSibling.textContent);
+        }
+    });
+
+    let labelText = selectedItemsText.join(', ');
+
+    if (labelText === '') {
+        label.textContent = 'Выбрать';
+    } else {
+        label.textContent = labelText;
+    }
+}
+
+let checkboxes = document.querySelectorAll('.decision-checkbox input[type="checkbox"]');
+
+checkboxes.forEach(function(checkbox) {
+    checkbox.addEventListener('change', function() {
+        updateText(this);
+    });
+});

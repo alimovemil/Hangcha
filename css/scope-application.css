@@ -299,12 +299,7 @@ ul {
 }
 
 .phone-nav {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
     display: none;
-    z-index: 9999999;
     cursor: pointer;
 
     .lines {
@@ -582,8 +577,19 @@ ul {
         justify-content: space-between;
         padding: 15px 0;
 
-        .header-item-logo {
-            display: none;
+        .header-item-scope {
+            svg {
+                width: 89px;
+                height: 50px;
+            }
+
+            svg path {
+                fill: rgb(27, 46, 97);
+            }
+
+            svg polygon {
+                fill: rgb(27, 46, 97);
+            }
         }
     }
 }

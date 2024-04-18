@@ -19,7 +19,8 @@
 @media (max-width: 1024px) {
     .header {
         .header-item {
-            justify-content: center !important;
+            position: relative;
+            gap: 20px;
 
             .phone-nav {
                 display: block;
@@ -30,7 +31,8 @@
             }
 
             .input-btn {
-                display: none;
+                width: 100%;
+                justify-content: flex-end;
             }
 
             .phone-nav {
@@ -93,6 +95,7 @@
             }
         }
     }
+
     .footer-meta {
         .footer {
             .footer-content {
@@ -121,9 +124,34 @@
             }
         }
     }
+
+    .content {
+        .header {
+            .header-item {
+                .header-item-scope {
+                    svg {
+                        height: 40px;
+                        width: auto;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 450px) {
+    .content {
+        .header {
+            .header-item {
+                .phone-nav {
+                    .lines {
+                        width: 25px;
+                    }
+                }
+            }
+        }
+    }
+
     .section {
         .main {
             .main-title {
@@ -184,6 +212,13 @@
 }
 
 @media (max-width: 376px) {
+    .content {
+        .header {
+            .header-item {
+                padding: 10px 0;
+            }
+        }
+    }
     .section {
         .main {
             .main-title {
@@ -212,9 +247,31 @@
         }
     }
 }
+
 @media (max-width: 320px) {
+    .content {
+        .header {
+            .header-item {
+                gap: 5px;
+
+                .input-btn {
+                    .dropdown {
+                        .btn-item {
+                            padding: 8px 5px;
+                        }
+
+                        .dropdown-language {
+                            min-width: 55px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     .section {
         overflow: hidden;
+
         .main {
             .main-title {
                 h1 {

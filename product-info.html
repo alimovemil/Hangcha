@@ -6,18 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/retail.css">
+    <link rel="stylesheet" href="css/product.css">
 </head>
 <body>
 <div class="content">
-    <header class="header">
+    <header class="header-inner">
         <div class="container">
             <div class="header-item">
-                <a href="#" class="header-item-img">
+                <a href="#" class="header-item-logo">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 101.75 57">
                         <defs>
                             <style>.cls-1 {
-                                fill: #FFFFFF;
+                                fill: #1b2e61;
                                 fill-rule: evenodd;
                             }</style>
                         </defs>
@@ -52,7 +52,7 @@
                         <div class="child">
                             <div class="child-main">
                                 <div class="child-flex">
-                                    <a href="">Розница / Оптом</a>
+                                    <a href="retail.html">Розница / Оптом</a>
                                     <a href="#">Пищевая / Фармацевтическая <br> промышленность</a>
                                     <a href="#">Транспорт / Логистика</a>
                                     <a href="#">Производство</a>
@@ -114,13 +114,14 @@
                     </li>
                 </ul>
                 <div class="input-btn">
-                    <div class="header-search">
+                    <div class="header-search-item">
                         <input placeholder="Поиск" type="text">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M17 17L21 21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M3 11C3 15.4183 6.58172 19 11 19C13.213 19 15.2161 18.1015 16.6644 16.6493C18.1077 15.2022 19 13.2053 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M17 17L21 21" stroke="#152F65" stroke-width="2" stroke-linecap="round"
+                                  stroke-linejoin="round"/>
+                            <path d="M3 11C3 15.4183 6.58172 19 11 19C13.213 19 15.2161 18.1015 16.6644 16.6493C18.1077 15.2022 19 13.2053 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11Z"
+                                  stroke="#152F65" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
-
                     </div>
                     <div class="dropdown">
                         <button class="btn dropdown-toggle btn-item" type="button" id="dropdownMenuButton1"
@@ -158,7 +159,7 @@
                     <a href="#">Назад</a>
                     <li class="child-block">
                         <div class="child-inner">
-                            <a href="">Розница / Оптом</a>
+                            <a href="retail.html">Розница / Оптом</a>
                             <a href="#">Пищевая / Фармацевтическая <br> промышленность</a>
                             <a href="#">Транспорт / Логистика</a>
                             <a href="#">Производство</a>
@@ -227,202 +228,239 @@
             </div>
         </div>
     </header>
-    <div class="banner">
-        <img src="/img/retail-banner.png" alt="">
-    </div>
-    <main>
-        <div class="main">
+    <main class="main">
+        <div class="main-item">
             <div class="container">
-                <div class="main-title">
-                    <h1>РОЗНИЦА / ОПТОМ</h1>
-                    <p>Поскольку онлайн-покупки становятся все более популярными, розничная и оптовая торговля
-                        сталкивается с <br> большими проблемами. Скорость — это первый запрос, так как ожидается
-                        доставка в
-                        тот же день; гибкость <br> стоит на втором месте после сбора и транспортировки тысяч предметов;
-                        экономическая эффективность, <br> ограниченное пространство также являются серьезными
-                        проблемами.
-                        Hangcha может предложить вам <br> индивидуальные решения, которые помогут превратить эти
-                        проблемы в
-                        возможности.</p>
-                </div>
-                <div class="main-item">
-                    <img src="/img/result.png" alt="">
-                    <div class="main-text">
-                        <h1>РЕЗУЛЬТАТЫ НАШИХ КЛИЕНТОВ</h1>
-                        <p>«Погрузчики Hangcha могут удовлетворить все строгие требования в Болгарии». Екатерина Х. из
-                            Болгарии, <br> которая работает с Hangcha более 10 лет, находится в Пловдиве, экономическом
-                            центре Болгарии. Эта <br> компания занимается производством погрузчиков более полувека и
-                            занимает
-                            более 50 % местного рынка в <br> течение длительного времени.</p>
+                <div class="banner">
+                    <div class="banner-img">
+                        <div class="banner-meta">
+                            <img src="/img/product-item.png" alt="">
+                        </div>
+                    </div>
+                    <div class="banner-info">
+                        <h1>A SERIES 2.5-3.5T (FOUR WHEEL, HIGH- <br> PERFORMANCE</h1>
+                        <div class="banner-text">
+                            <p>6000 - 10000 КГ</p>
+                            <span>Максимальная нагрузка</span>
+                        </div>
+                        <div class="banner-text">
+                            <p>0 - 6000 ММГ</p>
+                            <span>Высота подъема</span>
+                        </div>
+                        <div class="banner-text">
+                            <p>СВИНЦОВО-КИСЛОТНЫЙ АККУМУЛЯТОР</p>
+                            <span>Типы привода</span>
+                        </div>
+                        <div class="brochure">
+                            <a href="#" class="btn btn-link">
+                                Скачать брошюру
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="main-decision">
+        <div class="comfort">
             <div class="container">
-                <div class="main-meta">
-                    <div class="decision-col">
-                        <h1>РЕШЕНИЕ</h1>
-                        <p>Выберите правильные вилочные погрузчики <br> для вашего направление</p>
-                    </div>
-                    <div class="swiper-container i-series">
+                <div class="comfort-block">
+                    <div class="swiper-container i-comfort">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide slide-content">
-                                <a href="#">
-                                    <img src="/img/series-one.png" alt="">
-                                </a>
-                                <div class="slide-info">
-                                    <h3>ЭЛЕКТРИЧЕСКИЙ ВИЛОЧНЫЙ ПОГРУЗЧИК СЕРИИ XE С <br> ЛИТИЕВЫМ ПИТАНИЕМ 1.5-3.8 T
-                                    </h3>
-                                    <div class="line"></div>
-                                    <div class="slide-item">
-                                        <div class="slide-block">
-                                            <p>1,500~3,800 КГ</p>
-                                            <span>Грузоподъемность</span>
-                                        </div>
-                                        <div class="line"></div>
-                                        <div class="slide-block">
-                                            <p>0~7000 мм</p>
-                                            <span>Высота подъема</span>
-                                        </div>
+                            <div class="swiper-slide slide-comfort">
+                                <div class="comfort-item">
+                                    <div class="comfort-title">
+                                        <h1>Комфорт</h1>
+                                        <p><span></span>Угол наклона эргономичного штурвала регулируется, а <br> сиденье можно поворачивать
+                                            на 150 мм вперед и назад, <br>
+                                            чтобы оператор мог выбрать оптимальное положение для вождения. <br>
+                                            <span></span>Две независимые гидравлические системы рулевого торможения и гидравлического
+                                            подъема, соответственно, используются для обеспечения эффективности рулевого торможения и
+                                            выполнения комбинированных операций.
+                                            <span></span>Приборная панель, цилиндр наклона и плоская нижняя <br> панель полностью закрыты для
+                                            обеспечения более <br> комфортных и безопасных операций. <br>
+                                            <span></span>Многофункциональные приборы с цветным экраном имеют понятный интерфейс
+                                            человек-компьютер, отображающий <br> четкие показания. <br>
+                                            <span></span>Индивидуальный дизайн: вместительный накопитель, USB- <br> порт и т.д</p>
                                     </div>
-                                    <div class="line"></div>
-                                    <a href="product-info.html" class="btn btn-link">
-                                        Подробнее
-                                        <svg width="9" height="16" viewBox="0 0 9 16" fill="none"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M2 2L8 8L2 14" stroke="white" stroke-width="2"
-                                                  stroke-linecap="square"
-                                                  stroke-linejoin="round"/>
-                                        </svg>
-                                    </a>
+                                    <div class="comfort-img">
+                                        <img src="/img/comfort.png" alt="">
+                                    </div>
                                 </div>
                             </div>
-                            <div class="swiper-slide slide-content">
-                                <a href="#">
-                                    <img src="/img/series-two.png" alt="">
-                                </a>
-                                <div class="slide-info">
-                                    <h3>ЭЛЕКТРИЧЕСКИЙ ВИЛОЧНЫЙ ПОГРУЗЧИК СЕРИИ XE С <br> ЛИТИЕВЫМ ПИТАНИЕМ 1.5-3.8 T
-                                    </h3>
-                                    <div class="line"></div>
-                                    <div class="slide-item">
-                                        <div class="slide-block">
-                                            <p>1,500~3,800 КГ</p>
-                                            <span>Грузоподъемность</span>
-                                        </div>
-                                        <div class="line"></div>
-                                        <div class="slide-block">
-                                            <p>0~7000 мм</p>
-                                            <span>Высота подъема</span>
-                                        </div>
+                            <div class="swiper-slide slide-comfort">
+                                <div class="comfort-item">
+                                    <div class="comfort-title">
+                                        <h1>Комфорт</h1>
+                                        <p><span></span>Угол наклона эргономичного штурвала регулируется, а <br> сиденье можно поворачивать
+                                            на 150 мм вперед и назад, <br>
+                                            чтобы оператор мог выбрать оптимальное положение для вождения. <br>
+                                            <span></span>Две независимые гидравлические системы рулевого торможения и гидравлического
+                                            подъема, соответственно, используются для обеспечения эффективности рулевого торможения и
+                                            выполнения комбинированных операций.
+                                            <span></span>Приборная панель, цилиндр наклона и плоская нижняя <br> панель полностью закрыты для
+                                            обеспечения более <br> комфортных и безопасных операций. <br>
+                                            <span></span>Многофункциональные приборы с цветным экраном имеют понятный интерфейс
+                                            человек-компьютер, отображающий <br> четкие показания. <br>
+                                            <span></span>Индивидуальный дизайн: вместительный накопитель, USB- <br> порт и т.д</p>
                                     </div>
-                                    <div class="line"></div>
-                                    <a href="product-info.html" class="btn btn-link">
-                                        Подробнее
-                                        <svg width="9" height="16" viewBox="0 0 9 16" fill="none"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M2 2L8 8L2 14" stroke="white" stroke-width="2"
-                                                  stroke-linecap="square"
-                                                  stroke-linejoin="round"/>
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="swiper-slide slide-content">
-                                <a href="#">
-                                    <img src="/img/series-three.png" alt="">
-                                </a>
-                                <div class="slide-info">
-                                    <h3>ЭЛЕКТРИЧЕСКИЙ ВИЛОЧНЫЙ ПОГРУЗЧИК СЕРИИ XE С <br> ЛИТИЕВЫМ ПИТАНИЕМ 1.5-3.8 T
-                                    </h3>
-                                    <div class="line"></div>
-                                    <div class="slide-item">
-                                        <div class="slide-block">
-                                            <p>1,500~3,800 КГ</p>
-                                            <span>Грузоподъемность</span>
-                                        </div>
-                                        <div class="line"></div>
-                                        <div class="slide-block">
-                                            <p>0~7000 мм</p>
-                                            <span>Высота подъема</span>
-                                        </div>
+                                    <div class="comfort-img">
+                                        <img src="/img/comfort-two.png" alt="">
                                     </div>
-                                    <div class="line"></div>
-                                    <a href="product-info.html" class="btn btn-link">
-                                        Подробнее
-                                        <svg width="9" height="16" viewBox="0 0 9 16" fill="none"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M2 2L8 8L2 14" stroke="white" stroke-width="2"
-                                                  stroke-linecap="square"
-                                                  stroke-linejoin="round"/>
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="swiper-slide slide-content">
-                                <a href="#">
-                                    <img src="/img/series-four.png" alt="">
-                                </a>
-                                <div class="slide-info">
-                                    <h3>ЭЛЕКТРИЧЕСКИЙ ВИЛОЧНЫЙ ПОГРУЗЧИК СЕРИИ XE С <br> ЛИТИЕВЫМ ПИТАНИЕМ 1.5-3.8 T
-                                    </h3>
-                                    <div class="line"></div>
-                                    <div class="slide-item">
-                                        <div class="slide-block">
-                                            <p>1,500~3,800 КГ</p>
-                                            <span>Грузоподъемность</span>
-                                        </div>
-                                        <div class="line"></div>
-                                        <div class="slide-block">
-                                            <p>0~7000 мм</p>
-                                            <span>Высота подъема</span>
-                                        </div>
-                                    </div>
-                                    <div class="line"></div>
-                                    <a href="product-info.html" class="btn btn-link">
-                                        Подробнее
-                                        <svg width="9" height="16" viewBox="0 0 9 16" fill="none"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M2 2L8 8L2 14" stroke="white" stroke-width="2"
-                                                  stroke-linecap="square"
-                                                  stroke-linejoin="round"/>
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="swiper-slide slide-content">
-                                <a href="#">
-                                    <img src="/img/series-two.png" alt="">
-                                </a>
-                                <div class="slide-info">
-                                    <h3>ЭЛЕКТРИЧЕСКИЙ ВИЛОЧНЫЙ ПОГРУЗЧИК СЕРИИ XE С <br> ЛИТИЕВЫМ ПИТАНИЕМ 1.5-3.8 T
-                                    </h3>
-                                    <div class="line"></div>
-                                    <div class="slide-item">
-                                        <div class="slide-block">
-                                            <p>1,500~3,800 КГ</p>
-                                            <span>Грузоподъемность</span>
-                                        </div>
-                                        <div class="line"></div>
-                                        <div class="slide-block">
-                                            <p>0~7000 мм</p>
-                                            <span>Высота подъема</span>
-                                        </div>
-                                    </div>
-                                    <div class="line"></div>
-                                    <a href="product-info.html" class="btn btn-link">
-                                        Подробнее
-                                        <svg width="9" height="16" viewBox="0 0 9 16" fill="none"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M2 2L8 8L2 14" stroke="white" stroke-width="2"
-                                                  stroke-linecap="square"
-                                                  stroke-linejoin="round"/>
-                                        </svg>
-                                    </a>
                                 </div>
                             </div>
                         </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="comfort-banner">
+            <img src="/img/comfort-banner.png" alt="">
+        </div>
+        <div class="features">
+            <div class="container">
+                <div class="features-block">
+                    <h1>ОСОБЕННОСТИ</h1>
+                    <div class="features-item">
+                        <div class="features-info">
+                            <h6>Стабильность</h6>
+                            <div class="features-select">
+                                <p>eqeqweqweqwewq</p>
+                            </div>
+                            <div class="features-arrow">
+                                <div class="features-icon"></div>
+                            </div>
+                        </div>
+                        <div class="features-info">
+                            <h6>Ремонтопригодность</h6>
+                            <div class="features-select">
+                                <p>ewqeqweqsss</p>
+                            </div>
+                            <div class="features-arrow">
+                                <div class="features-icon"></div>
+                            </div>
+                        </div>
+                        <div class="features-info">
+                            <h6>Комфорт</h6>
+                            <div class="features-select">
+                                <p>ewqkeqwekqw</p>
+                            </div>
+                            <div class="features-arrow">
+                                <div class="features-icon"></div>
+                            </div>
+                        </div>
+                        <div class="features-info">
+                            <h6>Продвижение</h6>
+                            <div class="features-select">
+                                <p>ewqeqwllslsls</p>
+                            </div>
+                            <div class="features-arrow">
+                                <div class="features-icon"></div>
+                            </div>
+                        </div>
+                        <div class="features-info">
+                            <h6>Безопасность</h6>
+                            <div class="features-select">
+                                <p>ekwksslslslls</p>
+                            </div>
+                            <div class="features-arrow">
+                                <div class="features-icon"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="gallery">
+            <div class="container">
+                <div class="gallery-block">
+                    <h1>ГАЛЕРЕЯ</h1>
+                    <div class="swiper-container i-gallery">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="gallery-img">
+                                    <img src="/img/gallery-one.png" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="gallery-img">
+                                    <img src="/img/gallery-two.png" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="gallery-img">
+                                    <img src="/img/gallery-three.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-open">
+            <div class="container">
+                <div class="main-text">
+                    <h1>ОТКРОЙТЕ ДЛЯ СЕБЯ HANGCHA</h1>
+                    <p>50-летний опыт работы на вилочных погрузчиках</p>
+                </div>
+                <div class="main-item-h">
+                    <div class="main-v">
+                        <img src="/img/Decisions.png" alt="">
+                        <div class="title">
+                            <h1>РЕШЕНИЯ</h1>
+                            <a href="#" class="btn btn-main">
+                                КОРПОРАТИВНЫЕ РЕШЕНИЯ
+                                <svg width="9" height="16" viewBox="0 0 9 16" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2 2L8 8L2 14" stroke="white" stroke-width="2" stroke-linecap="square"
+                                          stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="main-v">
+                        <img src="/img/History.png" alt="">
+                        <div class="title">
+                            <h1>ИСТОРИЯ</h1>
+                            <a href="#" class="btn btn-main">
+                                ИСТОРИЯ КОМПАНИИ
+                                <svg width="9" height="16" viewBox="0 0 9 16" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2 2L8 8L2 14" stroke="white" stroke-width="2" stroke-linecap="square"
+                                          stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="main-v">
+                        <img src="/img/Service.png" alt="">
+                        <div class="title">
+                            <h1>СЕРВИС</h1>
+                            <a href="#" class="btn btn-main">
+                                КАК МЫ РАБОТАЕМ
+                                <svg width="9" height="16" viewBox="0 0 9 16" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2 2L8 8L2 14" stroke="white" stroke-width="2" stroke-linecap="square"
+                                          stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="massage">
+            <div class="container">
+                <div class="massage-item">
+                    <div class="massage-fixed">
+                        <h3>A SERIES 2.5-3.5T (FOUR WHEEL,HIGH-PERFORMANCE)</h3>
+                        <p>Оставьте заявку и наш менеджер свяжется с вами для ответов на все вопросы</p>
+                    </div>
+                    <div class="massage-download">
+                        <a href="#" class="btn btn-massage">
+                            Скачать брошюру
+                        </a>
                     </div>
                 </div>
             </div>

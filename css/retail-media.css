@@ -7,7 +7,8 @@
 @media (max-width: 1024px) {
     .header {
         .header-item {
-            justify-content: center !important;
+            position: relative;
+            gap: 20px;
 
             .phone-nav {
                 display: block;
@@ -18,7 +19,8 @@
             }
 
             .input-btn {
-                display: none;
+                width: 100%;
+                justify-content: flex-end;
             }
 
             .phone-nav {
@@ -56,6 +58,19 @@
 }
 
 @media (max-width: 768px) {
+    .content {
+        .header {
+            .header-item {
+                .header-item-img {
+                    svg {
+                        height: 40px;
+                        width: auto;
+                    }
+                }
+            }
+        }
+    }
+
     main {
         .main {
             padding-top: 50px;
@@ -119,6 +134,27 @@
 }
 
 @media (max-width: 450px) {
+    .content {
+        .header {
+            .header-item {
+                .phone-nav {
+                    .lines {
+                        width: 25px;
+                    }
+                }
+            }
+        }
+
+        .banner {
+            height: 400px;
+
+            img {
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
     main {
         .main {
             .main-title {
@@ -210,6 +246,14 @@
 }
 
 @media (max-width: 376px) {
+    .content {
+        .header {
+            .header-item {
+                padding: 10px 0;
+            }
+        }
+    }
+
     main {
         .main {
             .main-title {
@@ -239,6 +283,26 @@
 }
 
 @media (max-width: 320px) {
+    .content {
+        .header {
+            .header-item {
+                gap: 5px;
+
+                .input-btn {
+                    .dropdown {
+                        .btn-item {
+                            padding: 8px 5px;
+                        }
+
+                        .dropdown-language {
+                            min-width: 55px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     main {
         .main {
             .main-title {

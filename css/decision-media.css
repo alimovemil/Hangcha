@@ -7,7 +7,8 @@
 @media (max-width: 1024px) {
     .header {
         .header-item {
-            justify-content: center !important;
+            position: relative;
+            gap: 20px;
 
             .phone-nav {
                 display: block;
@@ -18,7 +19,8 @@
             }
 
             .input-btn {
-                display: none;
+                width: 100%;
+                justify-content: flex-end;
             }
 
             .phone-nav {
@@ -60,6 +62,17 @@
 
 @media (max-width: 768px) {
     .content {
+        .header {
+            .header-item {
+                .header-item-logo {
+                    svg {
+                        height: 40px;
+                        width: auto;
+                    }
+                }
+            }
+        }
+
         .section {
             .decision {
                 .decision-img {
@@ -129,6 +142,16 @@
     .content {
         overflow: hidden;
 
+        .header {
+            .header-item {
+                .phone-nav {
+                    .lines {
+                        width: 25px;
+                    }
+                }
+            }
+        }
+
         .section {
             .decision {
                 .decision-item {
@@ -193,6 +216,12 @@
 
 @media (max-width: 376px) {
     .content {
+        .header {
+            .header-item {
+                padding: 10px 0;
+            }
+        }
+
         .section {
             .decision {
                 .decision-item {
@@ -220,6 +249,24 @@
 
 @media (max-width: 320px) {
     .content {
+        .header {
+            .header-item {
+                gap: 5px;
+
+                .input-btn {
+                    .dropdown {
+                        .btn-item {
+                            padding: 8px 5px;
+                        }
+
+                        .dropdown-language {
+                            min-width: 55px;
+                        }
+                    }
+                }
+            }
+        }
+
         .section {
             .decision {
                 .decision-item {
