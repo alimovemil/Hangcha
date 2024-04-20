@@ -7,6 +7,8 @@
     <title>Document</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css"/>
+
 </head>
 <body>
 <div class="content">
@@ -244,7 +246,7 @@
                             <span>Максимальная нагрузка</span>
                         </div>
                         <div class="banner-text">
-                            <p>0 - 6000 ММГ</p>
+                            <p>0 - 6000 ММ</p>
                             <span>Высота подъема</span>
                         </div>
                         <div class="banner-text">
@@ -269,17 +271,23 @@
                                 <div class="comfort-item">
                                     <div class="comfort-title">
                                         <h1>Комфорт</h1>
-                                        <p><span></span>Угол наклона эргономичного штурвала регулируется, а <br> сиденье можно поворачивать
+                                        <p><span></span>Угол наклона эргономичного штурвала регулируется, а <br> сиденье
+                                            можно поворачивать
                                             на 150 мм вперед и назад, <br>
                                             чтобы оператор мог выбрать оптимальное положение для вождения. <br>
-                                            <span></span>Две независимые гидравлические системы рулевого торможения и гидравлического
-                                            подъема, соответственно, используются для обеспечения эффективности рулевого торможения и
+                                            <span></span>Две независимые гидравлические системы рулевого торможения и
+                                            гидравлического
+                                            подъема, соответственно, используются для обеспечения эффективности рулевого
+                                            торможения и
                                             выполнения комбинированных операций.
-                                            <span></span>Приборная панель, цилиндр наклона и плоская нижняя <br> панель полностью закрыты для
+                                            <span></span>Приборная панель, цилиндр наклона и плоская нижняя <br> панель
+                                            полностью закрыты для
                                             обеспечения более <br> комфортных и безопасных операций. <br>
-                                            <span></span>Многофункциональные приборы с цветным экраном имеют понятный интерфейс
+                                            <span></span>Многофункциональные приборы с цветным экраном имеют понятный
+                                            интерфейс
                                             человек-компьютер, отображающий <br> четкие показания. <br>
-                                            <span></span>Индивидуальный дизайн: вместительный накопитель, USB- <br> порт и т.д</p>
+                                            <span></span>Индивидуальный дизайн: вместительный накопитель, USB- <br> порт
+                                            и т.д</p>
                                     </div>
                                     <div class="comfort-img">
                                         <img src="/img/comfort.png" alt="">
@@ -290,17 +298,23 @@
                                 <div class="comfort-item">
                                     <div class="comfort-title">
                                         <h1>Комфорт</h1>
-                                        <p><span></span>Угол наклона эргономичного штурвала регулируется, а <br> сиденье можно поворачивать
+                                        <p><span></span>Угол наклона эргономичного штурвала регулируется, а <br> сиденье
+                                            можно поворачивать
                                             на 150 мм вперед и назад, <br>
                                             чтобы оператор мог выбрать оптимальное положение для вождения. <br>
-                                            <span></span>Две независимые гидравлические системы рулевого торможения и гидравлического
-                                            подъема, соответственно, используются для обеспечения эффективности рулевого торможения и
+                                            <span></span>Две независимые гидравлические системы рулевого торможения и
+                                            гидравлического
+                                            подъема, соответственно, используются для обеспечения эффективности рулевого
+                                            торможения и
                                             выполнения комбинированных операций.
-                                            <span></span>Приборная панель, цилиндр наклона и плоская нижняя <br> панель полностью закрыты для
+                                            <span></span>Приборная панель, цилиндр наклона и плоская нижняя <br> панель
+                                            полностью закрыты для
                                             обеспечения более <br> комфортных и безопасных операций. <br>
-                                            <span></span>Многофункциональные приборы с цветным экраном имеют понятный интерфейс
+                                            <span></span>Многофункциональные приборы с цветным экраном имеют понятный
+                                            интерфейс
                                             человек-компьютер, отображающий <br> четкие показания. <br>
-                                            <span></span>Индивидуальный дизайн: вместительный накопитель, USB- <br> порт и т.д</p>
+                                            <span></span>Индивидуальный дизайн: вместительный накопитель, USB- <br> порт
+                                            и т.д</p>
                                     </div>
                                     <div class="comfort-img">
                                         <img src="/img/comfort-two.png" alt="">
@@ -458,8 +472,8 @@
                         <p>Оставьте заявку и наш менеджер свяжется с вами для ответов на все вопросы</p>
                     </div>
                     <div class="massage-download">
-                        <a href="#" class="btn btn-massage">
-                            Скачать брошюру
+                        <a href="#" class="btn btn-massage" id="openModal">
+                            Оставить заявку
                         </a>
                     </div>
                 </div>
@@ -652,6 +666,57 @@
             </div>
         </div>
     </footer>
+</div>
+<div id="myModal" class="modals">
+    <div class="modal-content">
+        <div class="modal-block">
+            <div class="modal-img">
+                <div class="modal-meta">
+                    <img src="/img/product-item.png" alt="">
+                </div>
+            </div>
+            <div class="modal-info">
+                <h1>A SERIES 2.5-3.5T (FOUR WHEEL,HIGH-PERFORMANCE</h1>
+                <div class="modal-text">
+                    <p>6000 - 10000 КГ</p>
+                    <span>Максимальная нагрузка</span>
+                </div>
+                <div class="modal-text">
+                    <p>0 - 6000 ММ</p>
+                    <span>Высота подъема</span>
+                </div>
+                <div class="modal-text">
+                    <p>СВИНЦОВО-КИСЛОТНЫЙ АККУМУЛЯТОР</p>
+                    <span>Типы привода</span>
+                </div>
+            </div>
+        </div>
+        <form class="form">
+            <div class="form-item">
+                <h1>ОСТАВИТЬ ЗАЯВКУ</h1>
+                <div class="form-block">
+                    <label class="form-label">
+                        <input placeholder="Ваши ФИО" type="text">
+                    </label>
+                    <label class="form-label">
+                        <input placeholder="Ваш номер телефона" type="number">
+                    </label>
+                </div>
+                <div class="form-block">
+                    <label class="form-label">
+                        <input placeholder="Ваш e-mail" type="email">
+                    </label>
+                    <label class="form-label">
+                        <input placeholder="Название компании" type="text">
+                    </label>
+                </div>
+            </div>
+            <div class="form-link">
+                <a class="btn btn-form" href="#">Отправить</a>
+                <a class="btn btn-form-item" href="#">Отменить</a>
+            </div>
+        </form>
+    </div>
 </div>
 <script src="assets/js/jquery-2.2.4.min.js"></script>
 <script src="assets/js/bootstrap.bundle.min.js"></script>

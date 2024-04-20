@@ -439,10 +439,12 @@ ul {
     align-items: center;
     gap: 24px;
 
+
     li {
         list-style: none;
         position: relative;
         padding: 13px 0;
+
 
         a {
             color: #000000 !important;
@@ -513,6 +515,7 @@ ul {
     background: #fff;
     pointer-events: none;
     z-index: 1;
+
 }
 
 
@@ -570,6 +573,7 @@ ul {
     position: fixed;
     width: 100%;
     z-index: 9999;
+    background: #FFFFFF;
 
     .header-item {
         display: flex;
@@ -606,12 +610,12 @@ ul {
         max-width: 209px;
         width: 100%;
         color: #000000 !important;
-        opacity: 0.5;
 
         &::placeholder {
             color: #000000;
             font-family: "Montserrat-Regural", sans-serif;
             line-height: 24px;
+            opacity: 0.5;
         }
     }
 

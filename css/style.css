@@ -521,7 +521,7 @@ ul {
 .banner-title {
     position: absolute;
     left: 57%;
-    top: 50%;
+    top: 53%;
     transform: translate(-50%, -50%);
     width: 100%;
 
@@ -550,6 +550,7 @@ ul {
     align-items: center;
     gap: 20px;
     border-radius: 0;
+    height: 50px;
 
     &:hover,
     &:active,
@@ -590,16 +591,22 @@ ul {
         padding: 8px 12px 8px 46px;
         max-width: 209px;
         width: 100%;
-        color: #FFFFFF;
-
-        &::placeholder {
-            color: #FFFFFF;
-            font-family: "Montserrat-Regural", sans-serif;
-            line-height: 24px;
-        }
+        backdrop-filter: blur(30px);
     }
 
-    img {
+    input::-webkit-input-placeholder {
+        font-family: "Montserrat-Regural", sans-serif;
+        line-height: 24px;
+        opacity: 0.5;
+        color: #FFFFFF;
+        font-weight: 400;
+    }
+
+    input[data-placeholder-color="black"]::placeholder {
+        color: #000000;
+    }
+
+    svg {
         position: absolute;
         left: 12px;
         top: 8px;

@@ -118,8 +118,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const header = document.querySelector(".header");
     const links = document.querySelectorAll(".ul-list .link-group");
     const searchInput = document.querySelector(".header-search input");
+    const svgPaths = document.querySelectorAll(".svg-item path");
 
-    if (!header || !searchInput) {
+    if (!header || !searchInput || !svgPaths.length) {
         return;
     }
 
@@ -132,6 +133,10 @@ document.addEventListener("DOMContentLoaded", function () {
             searchInput.style.borderRadius = "4px";
             searchInput.style.background = "rgba(0, 0, 0, 0.1)";
             searchInput.style.color = "#000000";
+            searchInput.setAttribute("data-placeholder-color", "black");
+            svgPaths.forEach(path => {
+                path.setAttribute("stroke", "#152F65");
+            });
         } else {
             header.style.backgroundColor = "transparent";
             links.forEach(link => {
@@ -140,9 +145,14 @@ document.addEventListener("DOMContentLoaded", function () {
             searchInput.style.borderRadius = "";
             searchInput.style.background = "";
             searchInput.style.color = "#FFFFFF";
+            searchInput.removeAttribute("data-placeholder-color");
+            svgPaths.forEach(path => {
+                path.setAttribute("stroke", "#ffffff");
+            });
         }
     });
 });
+
 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -465,3 +475,17 @@ checkboxes.forEach(function(checkbox) {
         updateText(this);
     });
 });
+
+let openModalBtn = document.getElementById("openModal");
+
+let modal = document.getElementById("myModal");
+
+openModalBtn.onclick = function() {
+    modal.style.display = "block";
+}
+
+modal.onclick = function(event) {
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+}
