@@ -600,7 +600,6 @@ ul {
 .header-search-item {
     position: relative;
 
-
     input {
         border-radius: 4px;
         border: transparent;
@@ -609,13 +608,14 @@ ul {
         max-width: 209px;
         width: 100%;
         color: #000000 !important;
-        opacity: 0.5;
         background: rgb(255, 255, 255);
+        backdrop-filter: blur(30px);
 
         &::placeholder {
             color: #000000;
             font-family: "Montserrat-Regural", sans-serif;
             line-height: 24px;
+            opacity: 0.5;
         }
     }
 
@@ -625,6 +625,10 @@ ul {
         top: 8px;
         z-index: 1;
         cursor: pointer;
+
+        path {
+            stroke: #000000;
+        }
     }
 }
 

@@ -549,6 +549,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function updateText(checkbox) {
     let label = checkbox.closest('.decision-checkbox').previousElementSibling.querySelector('.decision-select-item span');
+    let total = checkbox.closest('.decision-checkbox').previousElementSibling.querySelector('.decision-select-item .total');
     let selectedItemsText = [];
 
     let checkboxes = checkbox.closest('.decision-checkbox').querySelectorAll('input[type="checkbox"]');
@@ -559,19 +560,23 @@ function updateText(checkbox) {
     });
 
     let labelText = selectedItemsText.join(', ');
+    let totalCount = selectedItemsText.length;
 
     if (labelText === '') {
         label.textContent = 'Выбрать';
+        total.classList.remove('show');
     } else {
         label.textContent = labelText;
+        total.classList.add('show');
     }
+
+    total.textContent = totalCount.toString();
 }
 
 let checkboxes = document.querySelectorAll('.decision-checkbox input[type="checkbox"]');
-
 checkboxes.forEach(function(checkbox) {
     checkbox.addEventListener('change', function() {
-        updateText(this);
+        updateText(checkbox);
     });
 });
 
