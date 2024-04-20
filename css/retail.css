@@ -599,11 +599,12 @@ ul {
         color: #000000 !important;
         background: rgba(255, 255, 255, 0.1);
 
-        &::placeholder {
-            color: #FFFFFF;
+        input::-webkit-input-placeholder {
             font-family: "Montserrat-Regural", sans-serif;
             line-height: 24px;
             opacity: 0.5;
+            color: #FFFFFF;
+            font-weight: 400;
         }
     }
 
@@ -615,7 +616,9 @@ ul {
         cursor: pointer;
     }
 }
-
+input[data-placeholder-color="black"]::placeholder {
+    color: #000000;
+}
 .input-btn {
     display: flex;
     align-items: center;
@@ -685,11 +688,14 @@ ul {
 
         .main-text {
             position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
+            left: 122px;
+            top: 195px;
             text-align: center;
             width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            max-width: 1196px;
 
             p {
                 color: #FFFFFF;

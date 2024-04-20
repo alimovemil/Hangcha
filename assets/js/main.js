@@ -1,6 +1,6 @@
 let swiperivideo = new Swiper('.i-video', {
     slidesPerView: 'auto',
-    spaceBetween: 13,
+    spaceBetween: 25,
     centeredSlides: true,
     centeredSlidesBounds: true,
     speed: 800,
@@ -69,20 +69,119 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+    let ulList = document.querySelector(".ul-list");
+
+    window.addEventListener("scroll", function() {
+        if (window.scrollY > 0) {
+            ulList.classList.add("scrolled");
+        } else {
+            ulList.classList.remove("scrolled");
+        }
+    });
+});
+
+
 let swiperiseries = new Swiper('.i-series', {
     slidesPerView: 4,
     spaceBetween: 0,
     speed: 800,
     loop: true,
     navigation: {
-        prevEl: '.i-series .i-page.next',
-        nextEl: '.i-series .i-page.prev',
+        nextEl: '.i-series-next',
+        prevEl: '.i-series-prev',
     },
     pagination: {
         el: '.i-series .swiper-pagination',
         clickable: true,
     },
+    breakpoints: {
+        0: {
+            slidesPerView: 1
+        },
+        768: {
+            slidesPerView: 2
+        },
+        1024: {
+            slidesPerView: 3
+        },
+        1440: {
+            slidesPerView: 4
+        },
+    }
+});
 
+let swiperlithium = new Swiper('.i-lithium', {
+    slidesPerView: 4,
+    spaceBetween: 0,
+    speed: 800,
+    loop: true,
+    navigation: {
+        nextEl: '.i-lithium-next',
+        prevEl: '.i-lithium-prev',
+    },
+    pagination: {
+        el: '.lithium .swiper-pagination',
+        clickable: true,
+    },
+    breakpoints: {
+        0: {
+            slidesPerView: 1
+        },
+        768: {
+            slidesPerView: 2
+        },
+        1024: {
+            slidesPerView: 3
+        },
+        1440: {
+            slidesPerView: 4
+        },
+    }
+});
+
+let swiperforklifts = new Swiper('.i-forklifts', {
+    slidesPerView: 4,
+    spaceBetween: 0,
+    speed: 800,
+    loop: true,
+    navigation: {
+        nextEl: '.i-forklifts-next',
+        prevEl: '.i-forklifts-prev',
+    },
+    pagination: {
+        el: '.i-forklifts .swiper-pagination',
+        clickable: true,
+    },
+    breakpoints: {
+        0: {
+            slidesPerView: 1
+        },
+        768: {
+            slidesPerView: 2
+        },
+        1024: {
+            slidesPerView: 3
+        },
+        1440: {
+            slidesPerView: 4
+        },
+    }
+});
+
+let swiperpallets = new Swiper('.i-pallets', {
+    slidesPerView: 4,
+    spaceBetween: 0,
+    speed: 800,
+    loop: true,
+    navigation: {
+        nextEl: '.i-pallets-next',
+        prevEl: '.i-pallets-prev',
+    },
+    pagination: {
+        el: '.i-pallets .swiper-pagination',
+        clickable: true,
+    },
     breakpoints: {
         0: {
             slidesPerView: 1

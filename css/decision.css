@@ -570,6 +570,7 @@ ul {
     position: fixed;
     width: 100%;
     z-index: 9999;
+    background: #FFFFFF;
 
     .header-item {
         display: flex;
@@ -710,6 +711,7 @@ ul {
                             color: #FFFFFF;
                             width: 100%;
                             text-align: left;
+                            font-family: "Roboto-Medium", sans-serif;
                         }
 
                         .decision-select-item {
@@ -797,6 +799,10 @@ ul {
                     background: #152F65;
                     border-radius: 0;
                     height: 50px;
+
+                    &:focus {
+                        box-shadow: none;
+                    }
                 }
 
                 .btn-filter {
@@ -805,6 +811,10 @@ ul {
                     color: #FFFFFF;
                     background: #000000;
                     border-radius: 0;
+
+                    &:focus {
+                        box-shadow: none;
+                    }
                 }
             }
         }
@@ -812,6 +822,30 @@ ul {
 
     .lithium {
         padding: 35px 0;
+
+        .lithium-block {
+            position: relative;
+
+            .swiper-button-prev {
+                left: -74px;
+                color: #000000;
+                opacity: 0.5;
+
+                &::after {
+                    content: 'none';
+                }
+            }
+
+            .swiper-button-next {
+                right: -74px;
+                color: #000000;
+                opacity: 0.5;
+
+                &::after {
+                    content: 'none';
+                }
+            }
+        }
 
         h1 {
             color: #152F65;
