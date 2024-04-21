@@ -2,6 +2,21 @@
     .container {
         padding: 0 12px !important;
     }
+    .content {
+        .section {
+            .lithium {
+                .lithium-block {
+                    .swiper-button-prev {
+                        left: 0;
+                    }
+
+                    .swiper-button-next {
+                        right: 0;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 1024px) {

@@ -15,6 +15,24 @@ let swiperivideo = new Swiper('.i-video', {
     },
 });
 
+let swiperproduct = new Swiper('.i-product', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    centeredSlides: true,
+    centeredSlidesBounds: true,
+    speed: 800,
+    loop: true,
+    navigation: {
+        prevEl: '.i-product .i-page.next',
+        nextEl: '.i-product .i-page.prev',
+    },
+    pagination: {
+        el: '.i-product .swiper-pagination',
+        clickable: true,
+    },
+});
+
+
 document.addEventListener("DOMContentLoaded", function () {
     let pageVideo = document.querySelectorAll(".bf");
 
@@ -296,6 +314,9 @@ let swiperbanner = new Swiper('.banner-item', {
     centeredSlidesBounds: true,
     speed: 800,
     loop: true,
+    // autoplay: {
+    //     delay: 5000,
+    // },
     navigation: {
         prevEl: '.banner-item .i-page.next',
         nextEl: '.banner-item .i-page.prev',

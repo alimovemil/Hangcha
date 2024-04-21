@@ -534,6 +534,8 @@ ul {
     display: flex;
     flex-direction: column;
     gap: 24px;
+    max-width: 598px;
+    width: 100%;
 
     .banner-title {
         display: flex;
@@ -692,7 +694,7 @@ ul {
 }
 
 .main-meta {
-    padding-top: 24px;
+    padding: 24px 0;
 }
 
 .main-content {
@@ -705,7 +707,6 @@ ul {
 
         .main-wrapper {
             position: absolute;
-            width: 100%;
             left: 48px;
             top: 48px;
             display: flex;
@@ -729,35 +730,45 @@ ul {
                     color: #FFFFFF;
                     font-family: "Montserrat-Regural", sans-serif;
                 }
-
-                .series {
-                    font-family: "Montserrat-Medium", sans-serif;
-                    font-size: 32px;
-                    line-height: 40px;
-                    font-weight: 500;
-                }
-
-                .series-title {
-                    font-size: 80px;
-                    line-height: 86px;
-                }
-
-            }
-        }
-
-        .text {
-            left: 48px;
-            bottom: 48px;
-            justify-content: flex-end;
-            gap: 24px;
-
-            .main-title {
-                gap: 8px;
             }
         }
     }
 }
 
+.main-solution {
+    .solution-block {
+        background: url("/img/Solution.png") no-repeat center / cover fixed;
+        height: 708px;
+        position: relative;
+
+        .main-solution-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            max-width: 660px;
+            width: 100%;
+            position: absolute;
+            left: 48px;
+            bottom: 48px;
+
+            .main-solution-wrapper-title {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            p {
+                color: #FFFFFF;
+            }
+
+            h1 {
+                font-size: 80px;
+                line-height: 86px;
+                color: #FFFFFF;
+            }
+        }
+    }
+}
 
 .btn-main {
     display: flex;

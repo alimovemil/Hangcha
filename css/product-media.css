@@ -2,11 +2,32 @@
     .container {
         padding: 0 12px !important;
     }
+
+    .content {
+        .product-banner {
+            .product-block {
+                .product-title {
+                    left: 44px;
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 1024px) {
     .content {
-        .header-inner {
+        .product-banner {
+            .product-block {
+                .product-title {
+                    h1 {
+                        font-size: 70px;
+                        line-height: 1.1;
+                    }
+                }
+            }
+        }
+
+        .header {
             .header-item {
                 position: relative;
                 gap: 20px;
@@ -113,7 +134,18 @@
 
 @media (max-width: 768px) {
     .content {
-        .header-inner {
+        .product-banner {
+            .product-block {
+                .product-title {
+                    h1 {
+                        font-size: 55px;
+                        line-height: 1.1;
+                    }
+                }
+            }
+        }
+
+        .header {
             .header-item {
                 .header-item-logo {
                     svg {
@@ -281,7 +313,7 @@
 
 @media (max-width: 450px) {
     .content {
-        .header-inner {
+        .header {
             .header-item {
                 .phone-nav {
                     .lines {
@@ -466,12 +498,35 @@
                 }
             }
         }
+
+        .product-banner {
+            .product-block {
+                height: 450px;
+
+                img {
+                    object-position: 62%;
+                }
+                .product-title {
+                    max-width: none;
+                    left: 12px;
+
+                    h1 {
+                        font-size: 30px;
+                        line-height: 1.2;
+                    }
+
+                    p {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
     }
 }
 
 @media (max-width: 376px) {
     .content {
-        .header-inner {
+        .header {
             .header-item {
                 padding: 10px 0;
             }
@@ -513,7 +568,7 @@
 
 @media (max-width: 320px) {
     .content {
-        .header-inner {
+        .header {
             .header-item {
                 gap: 5px;
 
@@ -574,6 +629,23 @@
 
             .footer {
                 padding-bottom: 65px;
+            }
+        }
+
+        .product-banner {
+            .product-block {
+                .product-title {
+                    max-width: none;
+                    left: 12px;
+
+                    h1 {
+                        font-size: 22px;
+                    }
+
+                    p {
+                        font-size: 13px;
+                    }
+                }
             }
         }
     }

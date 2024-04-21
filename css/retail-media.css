@@ -59,6 +59,8 @@
 
 @media (max-width: 768px) {
     .content {
+        overflow: hidden;
+
         .header {
             .header-item {
                 .header-item-img {
@@ -69,39 +71,41 @@
                 }
             }
         }
-    }
 
-    main {
-        .main {
-            padding-top: 50px;
+        main {
+            .main {
+                padding-top: 50px;
 
-            .main-title {
-                padding-bottom: 50px;
-            }
+                .main-title {
+                    padding-bottom: 50px;
+                }
 
-            .main-item {
-                .main-text {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 5px;
+                .main-item {
+                    .main-text {
+                        max-width: none;
+                        top: 65px;
+                        left: 0;
 
-                    h1 {
-                        font-size: 48px;
-                        line-height: 1.2;
-                    }
+                        h1 {
+                            font-size: 48px;
+                            line-height: 1.2;
+                        }
 
-                    p {
-                        font-size: 16px;
-                        line-height: 1.2;
+                        p {
+                            font-size: 16px;
+                            line-height: 1.2;
+                        }
                     }
                 }
             }
-        }
 
-        .main-decision {
-            padding-top: 50px;
+            .main-decision {
+                padding-top: 50px;
+            }
         }
     }
+
+
 
     .footer-meta {
         .footer {
@@ -151,39 +155,15 @@
             img {
                 height: 100%;
                 object-fit: cover;
+                object-position: 40%;
             }
         }
-    }
 
-    main {
-        .main {
-            .main-title {
-                h1 {
-                    font-size: 48px;
-                    line-height: 1.2;
-                }
-
-                p {
-                    font-size: 16px;
-                    line-height: 1.2;
-                }
-            }
-
-            .main-item {
-                height: 500px;
-
-                img {
-                    height: 100%;
-                    object-fit: cover;
-                }
-
-                .main-text {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 5px;
-
+        main {
+            .main {
+                .main-title {
                     h1 {
-                        font-size: 38px;
+                        font-size: 48px;
                         line-height: 1.2;
                     }
 
@@ -192,23 +172,49 @@
                         line-height: 1.2;
                     }
                 }
+
+                .main-item {
+                    height: 440px;
+
+                    img {
+                        height: 100%;
+                        object-fit: cover;
+                    }
+
+                    .main-text {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 5px;
+                        top: 80px;
+
+                        h1 {
+                            font-size: 38px;
+                            line-height: 1.2;
+                        }
+
+                        p {
+                            font-size: 16px;
+                            line-height: 1.2;
+                        }
+                    }
+                }
             }
-        }
 
-        .main-decision {
-            .main-meta {
-                h1 {
-                    font-size: 48px;
-                    line-height: 1.2;
-                }
+            .main-decision {
+                .main-meta {
+                    h1 {
+                        font-size: 48px;
+                        line-height: 1.2;
+                    }
 
-                p {
-                    font-size: 16px;
-                    line-height: 1.2;
-                }
+                    p {
+                        font-size: 16px;
+                        line-height: 1.2;
+                    }
 
-                p br {
-                    display: none;
+                    p br {
+                        display: none;
+                    }
                 }
             }
         }
@@ -252,30 +258,34 @@
                 padding: 10px 0;
             }
         }
-    }
 
-    main {
-        .main {
-            .main-title {
-                h1 {
-                    font-size: 40px;
-                }
-            }
-
-            .main-item {
-                .main-text {
+        main {
+            .main {
+                .main-title {
                     h1 {
-                        font-size: 32px;
+                        font-size: 40px;
+                    }
+                }
+
+                .main-item {
+                    .main-text {
+                        h1 {
+                            font-size: 32px;
+                        }
+
+                        p {
+                            font-size: 14px;
+                        }
                     }
                 }
             }
-        }
 
-        .main-decision {
-            .main-meta {
-                h1 {
-                    font-size: 40px;
-                    line-height: 1.2;
+            .main-decision {
+                .main-meta {
+                    h1 {
+                        font-size: 40px;
+                        line-height: 1.2;
+                    }
                 }
             }
         }
@@ -301,42 +311,42 @@
                 }
             }
         }
-    }
 
-    main {
-        .main {
-            .main-title {
-                h1 {
-                    font-size: 35px;
-                }
-
-                p {
-                    font-size: 14px;
-                }
-            }
-
-            .main-item {
-                .main-text {
+        main {
+            .main {
+                .main-title {
                     h1 {
-                        font-size: 30px;
+                        font-size: 35px;
                     }
 
                     p {
                         font-size: 14px;
                     }
                 }
-            }
-        }
 
-        .main-decision {
-            .main-meta {
-                h1 {
-                    font-size: 35px;
-                    line-height: 1.2;
+                .main-item {
+                    .main-text {
+                        h1 {
+                            font-size: 30px;
+                        }
+
+                        p {
+                            font-size: 14px;
+                        }
+                    }
                 }
+            }
 
-                p {
-                    font-size: 14px;
+            .main-decision {
+                .main-meta {
+                    h1 {
+                        font-size: 35px;
+                        line-height: 1.2;
+                    }
+
+                    p {
+                        font-size: 14px;
+                    }
                 }
             }
         }

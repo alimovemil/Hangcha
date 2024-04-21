@@ -3,6 +3,31 @@
         padding: 0 12px !important;
     }
 
+    .content {
+        overflow: hidden;
+
+        .banner {
+            .slide-item {
+                height: 700px;
+
+                a {
+                    .banner-text {
+                        left: 60px;
+                    }
+
+                    img {
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+
+            .swiper-pagination {
+                left: 60px;
+            }
+        }
+    }
+
     .main-meta {
         .main-content {
             gap: 16px;
@@ -67,8 +92,6 @@
             .wrapper {
                 .slide-banner {
                     .slide-item {
-                        height: 450px;
-
                         a {
                             img {
                                 height: 100%;
@@ -77,12 +100,8 @@
 
                             .banner-title {
                                 h1 {
-                                    font-size: 35px;
-                                    line-height: 1.2;
-                                }
-
-                                p {
-                                    font-size: 16px;
+                                    font-size: 70px;
+                                    line-height: 1.1;
                                 }
                             }
                         }
@@ -96,21 +115,38 @@
         }
     }
 
-    .main-meta {
-        .main-content {
-            .main-block {
-                .main-img {
-                    max-width: 492px;
-                }
+    .content {
+        .main-meta {
+            padding: 24px 0 16px 0;
 
-                .main-title {
-                    h1 {
-                        font-size: 35px;
-                        line-height: 1.2;
+            .main-content {
+                .main-block {
+                    .main-img {
+                        max-width: 492px;
                     }
 
-                    p {
-                        font-size: 16px;
+                    .main-title {
+                        h1 {
+                            font-size: 35px;
+                            line-height: 1.2;
+                        }
+
+                        p {
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .main-solution {
+            .solution-block {
+                .main-solution-wrapper {
+                    .main-solution-wrapper-title {
+                        h1 {
+                            font-size: 70px;
+                            line-height: 1.1;
+                        }
                     }
                 }
             }
@@ -150,6 +186,14 @@
 
 @media (max-width: 768px) {
     .banner {
+        .slide-banner {
+            a {
+                .banner-text {
+                    top: 70px;
+                }
+            }
+        }
+
         .header {
             .header-item {
                 .header-item-img {
@@ -201,62 +245,57 @@
             }
 
             .swiper-pagination-item {
-                left: 3%;
+                left: 60px;
             }
         }
     }
 
-    .main-meta {
-        .main-content {
-            .main-block {
-                .main-img {
-                    max-width: 364px;
-                }
+    .content {
+        .main-meta {
+            .main-content {
+                flex-wrap: nowrap;
 
-                .main-title {
-                    left: 17px;
-
-                    h1 {
-                        font-size: 28px;
-                        line-height: 30px;
+                .main-block {
+                    .main-img {
+                        max-width: none;
                     }
 
-                    h1 br {
-                        display: none;
-                    }
-
-                    p {
-                        font-size: 14px;
-                        line-height: 20px;
-                    }
-                }
-            }
-        }
-    }
-
-    .main-info {
-        .main-open {
-            .main-item {
-                .main-v {
-                    .title {
+                    .main-wrapper {
                         left: 19px;
-                        gap: 0;
 
-                        h1 {
-                            font-size: 30px;
-                            line-height: 1.2;
-                        }
+                        .main-title {
 
-                        .btn-main {
-                            font-size: 12px;
+                            h1 {
+                                font-size: 28px;
+                                line-height: 30px;
+                            }
+
+                            h1 br {
+                                display: none;
+                            }
+
+                            p {
+                                font-size: 14px;
+                                line-height: 20px;
+                            }
                         }
                     }
                 }
             }
         }
-    }
 
-    .banner {
+        .main-solution {
+            .solution-block {
+                .main-solution-wrapper {
+                    left: 19px;
+
+                    .main-solution-wrapper-title {
+
+                    }
+                }
+            }
+        }
+
         .footer-meta {
             padding-top: 50px;
 
@@ -287,36 +326,31 @@
                 }
             }
         }
+
     }
 
-    .footer-meta {
-        .footer {
-            .footer-content {
-                .footer-social {
-                    flex-wrap: wrap;
-                    gap: 10px;
+    .main-info {
+        .main-open {
+            .main-item {
+                .main-v {
+                    .title {
+                        left: 19px;
+                        gap: 0;
 
-                    .phone {
-                        .phone-item {
-                            a {
-                                font-size: 20px;
-                            }
+                        h1 {
+                            font-size: 30px;
+                            line-height: 1.2;
                         }
-                    }
-                }
 
-                .footer-block {
-                    .footer-item {
-                        max-width: none;
-
-                        h2 {
-                            font-size: 20px;
+                        .btn-main {
+                            font-size: 12px;
                         }
                     }
                 }
             }
         }
     }
+
 }
 
 @media (max-width: 450px) {
@@ -342,37 +376,44 @@
             .banner-item {
                 .wrapper {
                     .slide-banner {
-                        a {
-                            .banner-title {
-                                top: 70%;
-                                left: 53%;
-                                display: flex;
-                                flex-direction: column;
-                                gap: 7px;
-
-                                h1 {
-                                    font-size: 30px;
-                                    line-height: 1.2;
-                                    padding-bottom: 0;
+                        .slide-item {
+                            a {
+                                img {
+                                    object-position: 70%;
                                 }
 
-                                h1 br {
-                                    display: none;
-                                }
+                                .banner-text {
+                                    left: 19px;
+                                    max-width: none;
+                                    width: auto;
+                                    top: 115px;
 
-                                p {
-                                    font-size: 14px;
-                                    line-height: 1.2;
-                                    padding-bottom: 0;
-                                }
+                                    .banner-title {
+                                        display: flex;
+                                        flex-direction: column;
+                                        gap: 7px;
 
-                                p br {
-                                    display: none;
-                                }
+                                        h1 {
+                                            font-size: 30px;
+                                            line-height: 1.2;
+                                            padding-bottom: 0;
+                                        }
 
-                                .btn-link {
-                                    font-size: 12px;
-                                    max-width: 143px;
+                                        p {
+                                            font-size: 14px;
+                                            line-height: 1.2;
+                                            padding-bottom: 0;
+                                        }
+
+                                        p br {
+                                            display: none;
+                                        }
+
+                                        .btn-link {
+                                            font-size: 12px;
+                                            max-width: 143px;
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -380,7 +421,7 @@
                 }
 
                 .swiper-pagination-item {
-                    display: none;
+                    left: 19px;
                 }
             }
         }
@@ -390,8 +431,9 @@
 
             .main-meta {
                 .main-content {
+                    flex-direction: column;
+
                     .main-block {
-                        height: 400px;
 
                         img {
                             height: 100%;
@@ -426,14 +468,6 @@
                                     height: 9px;
                                     width: 5px;
                                 }
-                            }
-                        }
-
-                        .text {
-                            .btn-solution {
-                                max-width: 143px;
-                                padding: 8px 20px;
-                                font-size: 12px;
                             }
                         }
                     }
@@ -498,11 +532,50 @@
                 }
             }
         }
+
+        .main-solution {
+            .solution-block {
+                height: 401px;
+
+                .main-solution-wrapper {
+                    max-width: none;
+                    width: auto;
+
+                    .main-solution-wrapper-title {
+                        h1 {
+                            font-size: 30px;
+                        }
+
+                        p {
+                            font-size: 16px;
+                            line-height: 1.2;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
 @media (max-width: 376px) {
     .content {
+        .main-solution {
+            .solution-block {
+                height: 401px;
+
+                .main-solution-wrapper {
+                    max-width: none;
+                    width: auto;
+
+                    .main-solution-wrapper-title {
+                        h1 {
+                            font-size: 28px;
+                        }
+                    }
+                }
+            }
+        }
+
         .banner {
             .header {
                 .header-item {
@@ -649,6 +722,23 @@
                             p {
                                 font-size: 12px;
                             }
+                        }
+                    }
+                }
+            }
+        }
+
+        .main-solution {
+            .solution-block {
+                height: 401px;
+
+                .main-solution-wrapper {
+                    max-width: none;
+                    width: auto;
+
+                    .main-solution-wrapper-title {
+                        h1 {
+                            font-size: 24px;
                         }
                     }
                 }
