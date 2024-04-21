@@ -461,6 +461,10 @@ ul {
     width: 100%;
 }
 
+.ul-list.scrolled li:before {
+    background: rgb(21, 47, 101);
+}
+
 .ul-list li:before {
     position: absolute;
     left: 50%;
@@ -469,7 +473,7 @@ ul {
     width: 0;
     z-index: 15;
     height: 1px;
-    background: rgb(21, 47, 101);
+    background: rgba(255, 255, 255, 0.5);
     transition: all .5s;
     content: "";
 }
