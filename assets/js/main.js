@@ -22,6 +22,9 @@ let swiperproduct = new Swiper('.i-product', {
     centeredSlidesBounds: true,
     speed: 800,
     loop: true,
+    autoplay: {
+        delay: 5000,
+    },
     navigation: {
         prevEl: '.i-product .i-page.next',
         nextEl: '.i-product .i-page.prev',
@@ -314,9 +317,9 @@ let swiperbanner = new Swiper('.banner-item', {
     centeredSlidesBounds: true,
     speed: 800,
     loop: true,
-    // autoplay: {
-    //     delay: 5000,
-    // },
+    autoplay: {
+        delay: 5000,
+    },
     navigation: {
         prevEl: '.banner-item .i-page.next',
         nextEl: '.banner-item .i-page.prev',
