@@ -235,14 +235,61 @@ let swipericomfort = new Swiper('.i-comfort', {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
+    let headerItem = document.querySelector('.header-item');
+    let svgElements = headerItem.querySelectorAll('svg .cls-1');
+    let searchInput = document.querySelector('.header-search input');
+
+    headerItem.addEventListener('mouseenter', function() {
+        if (!window.scrollY) {
+            svgElements.forEach(function(element) {
+                element.style.fill = '#152F65';
+            });
+            searchInput.style.borderRadius = "4px";
+            searchInput.style.background = "rgba(0, 0, 0, 0.1)";
+            searchInput.style.color = "#000000";
+            searchInput.setAttribute("data-placeholder-color", "black");
+        }
+    });
+
+    headerItem.addEventListener('mouseleave', function() {
+        if (!window.scrollY) {
+            svgElements.forEach(function(element) {
+                element.style.fill = '#FFFFFF';
+            });
+            searchInput.style.borderRadius = "";
+            searchInput.style.background = "";
+            searchInput.style.color = "#FFFFFF";
+        }
+    });
+
     const header = document.querySelector(".header");
     const links = document.querySelectorAll(".ul-list .link-group");
-    const searchInput = document.querySelector(".header-search input");
     const svgPaths = document.querySelectorAll(".svg-item path");
 
-    if (!header || !searchInput || !svgPaths.length) {
+    if (!header || !headerItem || !searchInput || !svgPaths.length) {
         return;
     }
+
+    headerItem.addEventListener("mouseover", function () {
+        header.style.backgroundColor = "#FFFFFF";
+        links.forEach(link => {
+            link.style.color = "#000000";
+        });
+    });
+
+    headerItem.addEventListener("mouseout", function () {
+        if (window.scrollY > 0) {
+            header.style.backgroundColor = "#FFFFFF";
+            links.forEach(link => {
+                link.style.color = "#000000";
+            });
+        } else {
+            header.style.backgroundColor = "transparent";
+            links.forEach(link => {
+                link.style.color = "#FFFFFF";
+            });
+        }
+    });
 
     window.addEventListener("scroll", function () {
         if (window.scrollY > 0) {
@@ -257,6 +304,9 @@ document.addEventListener("DOMContentLoaded", function () {
             svgPaths.forEach(path => {
                 path.setAttribute("stroke", "#152F65");
             });
+            svgElements.forEach(element => {
+                element.style.fill = '#152F65';
+            });
         } else {
             header.style.backgroundColor = "transparent";
             links.forEach(link => {
@@ -269,11 +319,53 @@ document.addEventListener("DOMContentLoaded", function () {
             svgPaths.forEach(path => {
                 path.setAttribute("stroke", "#ffffff");
             });
+            svgElements.forEach(element => {
+                element.style.fill = '#FFFFFF';
+            });
         }
+    });
+
+    links.forEach(link => {
+        link.addEventListener("mouseover", function () {
+            header.style.backgroundColor = "#FFFFFF";
+            links.forEach(link => {
+                link.style.color = "#000000";
+            });
+        });
+
+        link.addEventListener("mouseout", function () {
+            if (window.scrollY > 0) {
+                header.style.backgroundColor = "#FFFFFF";
+                links.forEach(link => {
+                    link.style.color = "#000000";
+                });
+            } else {
+                header.style.backgroundColor = "transparent";
+                links.forEach(link => {
+                    link.style.color = "#FFFFFF";
+                });
+            }
+        });
     });
 });
 
 
+document.addEventListener("DOMContentLoaded", function () {
+    let headerItem = document.querySelector('.header-item');
+    let svgElements = headerItem.querySelectorAll('.svg-item path');
+
+    headerItem.addEventListener('mouseenter', function() {
+        svgElements.forEach(function(element) {
+            element.setAttribute('stroke', '#152F65');
+        });
+    });
+
+    headerItem.addEventListener('mouseleave', function() {
+        svgElements.forEach(function(element) {
+            element.setAttribute('stroke', '#FFFFFF');
+        });
+    });
+});
 
 document.addEventListener("DOMContentLoaded", function () {
     const headerInner = document.querySelector(".header-inner");
@@ -293,6 +385,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 searchInputItem.style.color = "#ffffff";
             }
         });
+
+
     }
 });
 
