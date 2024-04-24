@@ -85,6 +85,8 @@
                 }
 
                 .main-item {
+                    height: 310px;
+
                     .main-text {
                         max-width: none;
                         top: 65px;
@@ -193,6 +195,7 @@
 
                         h1 {
                             font-size: 38px;
+                            text-align: center;
                             line-height: 1.2;
                         }
 

@@ -22,9 +22,9 @@
 
 @font-face {
     font-family: "Roboto-Bold";
-    src: url("/fonts/RobotoCondensed-Bold.eot");
-    src: url("/fonts/RobotoCondensed-Bold.eot?#iefix") format("embedded-opentype"),
-    url("/fonts/RobotoCondensed-Bold.woff2") format("woff2"), url("/fonts/RobotoCondensed-Bold.woff") format("woff"),
+    src: url("../fonts/RobotoCondensed-Bold.eot");
+    src: url("../fonts/RobotoCondensed-Bold.eot?#iefix") format("embedded-opentype"),
+    url("/fonts/RobotoCondensed-Bold.woff2") format("woff2"), url("../fonts/RobotoCondensed-Bold.woff") format("woff"),
     url("/fonts/RobotoCondensed-Bold.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
@@ -33,10 +33,10 @@
 
 @font-face {
     font-family: "Roboto-Medium";
-    src: url("/fonts/RobotoCondensed-Medium.eot");
-    src: url("/fonts/RobotoCondensed-Medium.eot?#iefix") format("embedded-opentype"),
-    url("/fonts/RobotoCondensed-Medium.woff2") format("woff2"), url("/fonts/RobotoCondensed-Medium.woff") format("woff"),
-    url("/fonts/RobotoCondensed-Medium.ttf") format("truetype");
+    src: url("../fonts/RobotoCondensed-Medium.eot");
+    src: url("../fonts/RobotoCondensed-Medium.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/RobotoCondensed-Medium.woff2") format("woff2"), url("../fonts/RobotoCondensed-Medium.woff") format("woff"),
+    url("../fonts/RobotoCondensed-Medium.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -44,10 +44,10 @@
 
 @font-face {
     font-family: "Roboto-Regural";
-    src: url("/fonts/RobotoCondensed-Regular.eot");
-    src: url("/fonts/RobotoCondensed-Regular.eot?#iefix") format("embedded-opentype"),
-    url("/fonts/RobotoCondensed-Medium.woff2") format("woff2"), url("/fonts/RobotoCondensed-Medium.woff") format("woff"),
-    url("/fonts/RobotoCondensed-Regular.ttf") format("truetype");
+    src: url("../fonts/RobotoCondensed-Regular.eot");
+    src: url("../fonts/RobotoCondensed-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/RobotoCondensed-Medium.woff2") format("woff2"), url("../fonts/RobotoCondensed-Medium.woff") format("woff"),
+    url("../fonts/RobotoCondensed-Regular.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -55,10 +55,10 @@
 
 @font-face {
     font-family: "Montserrat-Bold";
-    src: url("/fonts/Montserrat-Bold.eot");
-    src: url("/fonts/Montserrat-Bold.eot?#iefix") format("embedded-opentype"),
-    url("/fonts/Montserrat-Bold.woff2") format("woff2"), url("/fonts/Montserrat-Bold.woff") format("woff"),
-    url("/fonts/Montserrat-Bold.ttf") format("truetype");
+    src: url("../fonts/Montserrat-Bold.eot");
+    src: url("../fonts/Montserrat-Bold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Bold.woff") format("woff"),
+    url("../fonts/Montserrat-Bold.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -66,10 +66,11 @@
 
 @font-face {
     font-family: "Montserrat-SemiBold";
-    src: url("/fonts/Montserrat-SemiBold.eot");
-    src: url("/fonts/Montserrat-SemiBold.eot?#iefix") format("embedded-opentype"),
-    url("/fonts/Montserrat-SemiBold.woff2") format("woff2"), url("/fonts/Montserrat-SemiBold.woff") format("woff"),
-    url("/fonts/Montserrat-SemiBold.ttf") format("truetype");
+    src: url("../fonts/Montserrat-SemiBold.eot");
+    src: url("../fonts/Montserrat-SemiBold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Montserrat-SemiBold.woff2") format("woff2"),
+    url("../fonts/Montserrat-SemiBold.woff") format("woff"),
+    url("../fonts/Montserrat-SemiBold.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
     font-display: swap;

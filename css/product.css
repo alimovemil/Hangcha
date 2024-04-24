@@ -464,7 +464,7 @@ ul {
         padding: 13px 0;
 
         a {
-            color: #000000 ;
+            color: #000000;
         }
     }
 }
@@ -481,13 +481,17 @@ ul {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: 100%;
+    top: 125%;
     width: 0;
     z-index: 15;
     height: 1px;
     background: rgb(21, 47, 101);
     transition: all .5s;
     content: "";
+}
+
+.svg-hovered {
+    stroke: #152F65
 }
 
 .child-main {
@@ -882,6 +886,19 @@ ul {
                     justify-content: center;
                     align-items: center;
                     gap: 12px;
+
+                    .swiper-pagination-bullet {
+                        background-color: #152F65;
+                        opacity: 0.5;
+                        transition: opacity 1s ease;
+                    }
+
+                    .swiper-pagination-bullet-active {
+                        width: 48px;
+                        background-color: #152F65;
+                        opacity: 1;
+                        border-radius: 100px;
+                    }
                 }
             }
         }
@@ -990,10 +1007,16 @@ ul {
                     max-width: 464px;
                     width: 100%;
                     height: 464px;
+                    overflow: hidden;
 
                     img {
                         height: 100%;
                         object-fit: contain;
+                        transition: all 1s;
+                    }
+
+                    &:hover img {
+                        transform: scale(1.05);
                     }
                 }
 
@@ -1004,6 +1027,19 @@ ul {
                     justify-content: center;
                     align-items: center;
                     gap: 12px;
+
+                    .swiper-pagination-bullet {
+                        background: rgb(21, 47, 101);
+                        opacity: 0.5;
+                        transition: opacity 1s ease;
+                    }
+
+                    .swiper-pagination-bullet-active {
+                        width: 48px;
+                        background-color: #152F65;
+                        border-radius: 100px;
+                        opacity: 1;
+                    }
                 }
             }
         }
@@ -1037,6 +1073,17 @@ ul {
 
             .main-v {
                 position: relative;
+                overflow: hidden;
+
+                .main-v-img {
+                    img {
+                        transition: all 1s;
+                    }
+
+                    &:hover img {
+                        transform: scale(1.05);
+                    }
+                }
             }
 
             .title {
@@ -1162,7 +1209,27 @@ ul {
                             font-size: 12px;
                             font-family: "Montserrat-Regural", sans-serif;
                             line-height: 20px;
+                            display: inline-block;
                             color: #FFFFFF !important;
+                            position: relative;
+
+                            &::after {
+                                position: absolute;
+                                left: 50%;
+                                right: 0;
+                                transform: translateX(-50%);
+                                bottom: 0;
+                                width: 0;
+                                height: 1px;
+                                background-color: #999;
+                                content: "";
+                                z-index: 6;
+                                transition: width 0.2s cubic-bezier(0.260, 0.005, 0.000, 1.035);
+                            }
+
+                            &:hover::after {
+                                width: 100%;
+                            }
                         }
                     }
                 }
@@ -1272,6 +1339,7 @@ ul {
 
         .modal-img {
             padding: 76px 22px;
+
             .modal-meta {
                 width: 298px;
                 height: 190px;
@@ -1284,6 +1352,7 @@ ul {
             }
         }
     }
+
     .form {
         padding: 24px;
         background: rgba(21, 47, 101, 0.05);

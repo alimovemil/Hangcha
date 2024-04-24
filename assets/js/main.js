@@ -90,10 +90,10 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     let ulList = document.querySelector(".ul-list");
 
-    window.addEventListener("scroll", function() {
+    window.addEventListener("scroll", function () {
         if (window.scrollY > 0) {
             ulList.classList.add("scrolled");
         } else {
@@ -234,50 +234,110 @@ let swipericomfort = new Swiper('.i-comfort', {
     },
 });
 
-    document.addEventListener("DOMContentLoaded", function () {
-        let headerItem = document.querySelector('.header-item');
-        let svgElements = headerItem.querySelectorAll('svg .cls-1');
-        let searchInput = document.querySelector('.header-search input');
+document.addEventListener("DOMContentLoaded", function () {
+    let headerItem = document.querySelector('.header-item');
+    let svgElements = headerItem.querySelectorAll('svg .cls-1');
+    let searchInput = document.querySelector('.header-search input');
 
-        headerItem.addEventListener('mouseenter', function() {
-            if (!window.scrollY) {
-                svgElements.forEach(function(element) {
-                    element.style.fill = '#152F65';
-                });
-                searchInput.style.borderRadius = "4px";
-                searchInput.style.background = "rgba(0, 0, 0, 0.1)";
-                searchInput.style.color = "#000000";
-                searchInput.setAttribute("data-placeholder-color", "black");
-            }
-        });
-
-        headerItem.addEventListener('mouseleave', function() {
-            if (!window.scrollY) {
-                svgElements.forEach(function(element) {
-                    element.style.fill = '#FFFFFF';
-                });
-                searchInput.style.borderRadius = "";
-                searchInput.style.background = "";
-                searchInput.style.color = "#FFFFFF";
-            }
-        });
-
-        const header = document.querySelector(".header");
-        const links = document.querySelectorAll(".ul-list .link-group");
-        const svgPaths = document.querySelectorAll(".svg-item path");
-
-        if (!header || !headerItem || !searchInput || !svgPaths.length) {
-            return;
+    headerItem.addEventListener('mouseenter', function () {
+        if (!window.scrollY) {
+            svgElements.forEach(function (element) {
+                element.style.transition = "fill 0.3s ease";
+                element.style.fill = '#152F65';
+            });
+            searchInput.style.transition = "border-radius 0.3s ease, background 0.3s ease, color 0.3s ease";
+            searchInput.style.borderRadius = "4px";
+            searchInput.style.background = "rgba(0, 0, 0, 0.1)";
+            searchInput.style.color = "#000000";
+            searchInput.setAttribute("data-placeholder-color", "black");
         }
+    });
 
-        headerItem.addEventListener("mouseover", function () {
+    headerItem.addEventListener('mouseleave', function () {
+        if (!window.scrollY) {
+            svgElements.forEach(function (element) {
+                element.style.fill = '#FFFFFF';
+            });
+            searchInput.style.borderRadius = "";
+            searchInput.style.background = "";
+            searchInput.style.color = "#FFFFFF";
+        }
+    });
+
+    const header = document.querySelector(".header");
+    const links = document.querySelectorAll(".ul-list .link-group");
+    const svgPaths = document.querySelectorAll(".svg-item path");
+
+    if (!header || !headerItem || !searchInput || !svgPaths.length) {
+        return;
+    }
+
+    headerItem.addEventListener("mouseover", function () {
+        header.style.transition = "background-color 0.3s ease";
+        header.style.backgroundColor = "#FFFFFF";
+        links.forEach(link => {
+            link.style.transition = "color 0.3s ease";
+            link.style.color = "#000000";
+        });
+    });
+
+    headerItem.addEventListener("mouseout", function () {
+        if (window.scrollY > 0) {
+            header.style.backgroundColor = "#FFFFFF";
+            links.forEach(link => {
+                link.style.color = "#000000";
+            });
+        } else {
+            header.style.backgroundColor = "transparent";
+            links.forEach(link => {
+                link.style.color = "#FFFFFF";
+            });
+        }
+    });
+
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > 0) {
+            header.style.backgroundColor = "#FFFFFF";
+            links.forEach(link => {
+                link.style.color = "#000000";
+            });
+            searchInput.style.borderRadius = "4px";
+            searchInput.style.background = "rgba(0, 0, 0, 0.1)";
+            searchInput.style.color = "#000000";
+            searchInput.setAttribute("data-placeholder-color", "black");
+            svgPaths.forEach(path => {
+                path.setAttribute("stroke", "#152F65");
+            });
+            svgElements.forEach(element => {
+                element.style.fill = '#152F65';
+            });
+        } else {
+            header.style.backgroundColor = "transparent";
+            links.forEach(link => {
+                link.style.color = "#FFFFFF";
+            });
+            searchInput.style.borderRadius = "";
+            searchInput.style.background = "";
+            searchInput.style.color = "#FFFFFF";
+            searchInput.removeAttribute("data-placeholder-color");
+            svgPaths.forEach(path => {
+                path.setAttribute("stroke", "#ffffff");
+            });
+            svgElements.forEach(element => {
+                element.style.fill = '#FFFFFF';
+            });
+        }
+    });
+
+    links.forEach(link => {
+        link.addEventListener("mouseover", function () {
             header.style.backgroundColor = "#FFFFFF";
             links.forEach(link => {
                 link.style.color = "#000000";
             });
         });
 
-        headerItem.addEventListener("mouseout", function () {
+        link.addEventListener("mouseout", function () {
             if (window.scrollY > 0) {
                 header.style.backgroundColor = "#FFFFFF";
                 links.forEach(link => {
@@ -289,82 +349,57 @@ let swipericomfort = new Swiper('.i-comfort', {
                     link.style.color = "#FFFFFF";
                 });
             }
-        });
-
-        window.addEventListener("scroll", function () {
-            if (window.scrollY > 0) {
-                header.style.backgroundColor = "#FFFFFF";
-                links.forEach(link => {
-                    link.style.color = "#000000";
-                });
-                searchInput.style.borderRadius = "4px";
-                searchInput.style.background = "rgba(0, 0, 0, 0.1)";
-                searchInput.style.color = "#000000";
-                searchInput.setAttribute("data-placeholder-color", "black");
-                svgPaths.forEach(path => {
-                    path.setAttribute("stroke", "#152F65");
-                });
-                svgElements.forEach(element => {
-                    element.style.fill = '#152F65';
-                });
-            } else {
-                header.style.backgroundColor = "transparent";
-                links.forEach(link => {
-                    link.style.color = "#FFFFFF";
-                });
-                searchInput.style.borderRadius = "";
-                searchInput.style.background = "";
-                searchInput.style.color = "#FFFFFF";
-                searchInput.removeAttribute("data-placeholder-color");
-                svgPaths.forEach(path => {
-                    path.setAttribute("stroke", "#ffffff");
-                });
-                svgElements.forEach(element => {
-                    element.style.fill = '#FFFFFF';
-                });
-            }
-        });
-
-        links.forEach(link => {
-            link.addEventListener("mouseover", function () {
-                header.style.backgroundColor = "#FFFFFF";
-                links.forEach(link => {
-                    link.style.color = "#000000";
-                });
-            });
-
-            link.addEventListener("mouseout", function () {
-                if (window.scrollY > 0) {
-                    header.style.backgroundColor = "#FFFFFF";
-                    links.forEach(link => {
-                        link.style.color = "#000000";
-                    });
-                } else {
-                    header.style.backgroundColor = "transparent";
-                    links.forEach(link => {
-                        link.style.color = "#FFFFFF";
-                    });
-                }
-            });
-        });
-    });
-
-document.addEventListener("DOMContentLoaded", function () {
-    let headerItem = document.querySelector('.header-item');
-    let svgElements = headerItem.querySelectorAll('.svg-item path');
-
-    headerItem.addEventListener('mouseenter', function() {
-        svgElements.forEach(function(element) {
-            element.setAttribute('stroke', '#152F65');
-        });
-    });
-
-    headerItem.addEventListener('mouseleave', function() {
-        svgElements.forEach(function(element) {
-            element.setAttribute('stroke', '#FFFFFF');
         });
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const header = document.querySelector(".header");
+    const headerItem = document.querySelector('.header-item');
+    const svgElements = headerItem.querySelectorAll('.svg-item path');
+    const links = document.querySelectorAll(".ul-list .link-group");
+    const searchInput = document.querySelector('.header-search input');
+
+    headerItem.addEventListener('mouseenter', function () {
+        svgElements.forEach(function (element) {
+            element.classList.add('svg-hovered');
+        });
+    });
+
+    headerItem.addEventListener('mouseleave', function () {
+        svgElements.forEach(function (element) {
+            element.classList.remove('svg-hovered');
+        });
+    });
+
+    function handleScroll() {
+        if (window.scrollY > 0) {
+            header.classList.add('scrolled');
+            links.forEach(link => link.classList.add('link-scrolled'));
+            searchInput.classList.add('search-scrolled');
+            svgElements.forEach(function (element) {
+                element.classList.add('svg-scrolled');
+            });
+        } else {
+            header.classList.remove('scrolled');
+            links.forEach(link => link.classList.remove('link-scrolled'));
+            searchInput.classList.remove('search-scrolled');
+            svgElements.forEach(function (element) {
+                element.classList.remove('svg-scrolled');
+            });
+        }
+    }
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Начальное состояние
+
+    links.forEach(link => {
+        link.addEventListener("mouseover", handleScroll);
+        link.addEventListener("mouseout", handleScroll);
+    });
+});
+
+
 
 document.addEventListener("DOMContentLoaded", function () {
     const headerInner = document.querySelector(".header-inner");
@@ -389,7 +424,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
     let svgElements = document.querySelectorAll('.header-item-img svg .cls-1');
 
     if (window.scrollY > 0) {
@@ -410,9 +445,9 @@ let swiperbanner = new Swiper('.banner-item', {
     centeredSlidesBounds: true,
     speed: 800,
     loop: true,
-    // autoplay: {
-    //     delay: 5000,
-    // },
+    autoplay: {
+        delay: 5000,
+    },
     navigation: {
         prevEl: '.banner-item .i-page.next',
         nextEl: '.banner-item .i-page.prev',
@@ -422,6 +457,8 @@ let swiperbanner = new Swiper('.banner-item', {
         clickable: true,
     },
 });
+
+
 
 let swipergallery = new Swiper('.i-gallery', {
     slidesPerView: 3,
@@ -454,11 +491,11 @@ let swipergallery = new Swiper('.i-gallery', {
     }
 });
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     let phoneNav = document.querySelector(".phone-nav");
     let phoneNavMenu = document.querySelector(".phone-nav-mn");
 
-    phoneNav.addEventListener("click", function() {
+    phoneNav.addEventListener("click", function () {
         if (phoneNav.classList.contains("active")) {
             phoneNav.classList.remove("active");
             phoneNavMenu.style.opacity = 0;
@@ -471,12 +508,12 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const selectItems = document.querySelectorAll(".decision-select-item");
     const checkboxBlocks = document.querySelectorAll(".decision-checkbox");
 
     selectItems.forEach((selectItem, index) => {
-        selectItem.addEventListener("click", function() {
+        selectItem.addEventListener("click", function () {
             const isOpen = !checkboxBlocks[index].classList.contains("hidden");
 
             checkboxBlocks.forEach((checkboxBlock, i) => {
@@ -500,8 +537,8 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 let labels = document.querySelectorAll('.label input');
-labels.forEach(function(input) {
-    input.addEventListener('click', function() {
+labels.forEach(function (input) {
+    input.addEventListener('click', function () {
         let label = input.parentElement;
         if (label.classList.contains('clicked')) {
             label.classList.remove('clicked');
@@ -511,22 +548,22 @@ labels.forEach(function(input) {
     });
 });
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const featuresArrows = document.querySelectorAll('.features-arrow');
-    featuresArrows.forEach(function(featuresArrow) {
-        featuresArrow.addEventListener('click', function() {
+    featuresArrows.forEach(function (featuresArrow) {
+        featuresArrow.addEventListener('click', function () {
             const parentFeaturesInfo = this.closest('.features-info');
             const featuresSelect = parentFeaturesInfo.querySelector('.features-select');
 
             const allFeaturesSelects = document.querySelectorAll('.features-select');
-            allFeaturesSelects.forEach(function(select) {
+            allFeaturesSelects.forEach(function (select) {
                 if (select !== featuresSelect) {
                     select.style.display = 'none';
                 }
             });
 
             const allFeaturesArrows = document.querySelectorAll('.features-arrow');
-            allFeaturesArrows.forEach(function(arrow) {
+            allFeaturesArrows.forEach(function (arrow) {
                 if (arrow !== featuresArrow) {
                     arrow.classList.remove('active');
                 }
@@ -549,7 +586,7 @@ function updateText(checkbox) {
     let selectedItemsText = [];
 
     let checkboxes = checkbox.closest('.decision-checkbox').querySelectorAll('input[type="checkbox"]');
-    checkboxes.forEach(function(cb) {
+    checkboxes.forEach(function (cb) {
         if (cb.checked) {
             selectedItemsText.push(cb.nextElementSibling.textContent);
         }
@@ -570,8 +607,8 @@ function updateText(checkbox) {
 }
 
 let checkboxes = document.querySelectorAll('.decision-checkbox input[type="checkbox"]');
-checkboxes.forEach(function(checkbox) {
-    checkbox.addEventListener('change', function() {
+checkboxes.forEach(function (checkbox) {
+    checkbox.addEventListener('change', function () {
         updateText(checkbox);
     });
 });
@@ -580,22 +617,23 @@ let openModalBtn = document.getElementById("openModal");
 
 let modal = document.getElementById("myModal");
 
-openModalBtn.onclick = function() {
+openModalBtn.onclick = function () {
     modal.style.display = "block";
 }
 
-modal.onclick = function(event) {
+modal.onclick = function (event) {
     if (event.target === modal) {
         modal.style.display = "none";
     }
 }
+
 function scrollToElement(target) {
     // Select the target element
     const element = document.querySelector(target);
 
     // Scroll the target element into view
     if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+        element.scrollIntoView({behavior: 'smooth'});
         // Show/hide child items based on the selected target
         showHideChildItems(target);
     }

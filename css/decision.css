@@ -446,6 +446,10 @@ ul {
     }
 }
 
+.svg-item path {
+    stroke: #152F65;
+}
+
 .ul-list {
     margin: 0;
     display: flex;
@@ -471,7 +475,7 @@ ul {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: 100%;
+    top: 125%;
     width: 0;
     z-index: 15;
     height: 1px;
@@ -576,6 +580,10 @@ ul {
     &:focus {
         text-decoration: none;
     }
+}
+
+.svg-hovered{
+    stroke: #152F65
 }
 
 .header {
@@ -1009,7 +1017,27 @@ ul {
                             font-size: 12px;
                             font-family: "Montserrat-Regural", sans-serif;
                             line-height: 20px;
+                            display: inline-block;
                             color: #FFFFFF !important;
+                            position: relative;
+
+                            &::after {
+                                position: absolute;
+                                left: 50%;
+                                right: 0;
+                                transform: translateX(-50%);
+                                bottom: 0;
+                                width: 0;
+                                height: 1px;
+                                background-color: #999;
+                                content: "";
+                                z-index: 6;
+                                transition: width 0.2s cubic-bezier(0.260, 0.005, 0.000, 1.035);
+                            }
+
+                            &:hover::after {
+                                width: 100%;
+                            }
                         }
                     }
                 }
