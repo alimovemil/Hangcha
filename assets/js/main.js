@@ -234,106 +234,50 @@ let swipericomfort = new Swiper('.i-comfort', {
     },
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-    let headerItem = document.querySelector('.header-item');
-    let svgElements = headerItem.querySelectorAll('svg .cls-1');
-    let searchInput = document.querySelector('.header-search input');
+    document.addEventListener("DOMContentLoaded", function () {
+        let headerItem = document.querySelector('.header-item');
+        let svgElements = headerItem.querySelectorAll('svg .cls-1');
+        let searchInput = document.querySelector('.header-search input');
 
-    headerItem.addEventListener('mouseenter', function() {
-        if (!window.scrollY) {
-            svgElements.forEach(function(element) {
-                element.style.fill = '#152F65';
-            });
-            searchInput.style.borderRadius = "4px";
-            searchInput.style.background = "rgba(0, 0, 0, 0.1)";
-            searchInput.style.color = "#000000";
-            searchInput.setAttribute("data-placeholder-color", "black");
-        }
-    });
-
-    headerItem.addEventListener('mouseleave', function() {
-        if (!window.scrollY) {
-            svgElements.forEach(function(element) {
-                element.style.fill = '#FFFFFF';
-            });
-            searchInput.style.borderRadius = "";
-            searchInput.style.background = "";
-            searchInput.style.color = "#FFFFFF";
-        }
-    });
-
-    const header = document.querySelector(".header");
-    const links = document.querySelectorAll(".ul-list .link-group");
-    const svgPaths = document.querySelectorAll(".svg-item path");
-
-    if (!header || !headerItem || !searchInput || !svgPaths.length) {
-        return;
-    }
-
-    headerItem.addEventListener("mouseover", function () {
-        header.style.backgroundColor = "#FFFFFF";
-        links.forEach(link => {
-            link.style.color = "#000000";
+        headerItem.addEventListener('mouseenter', function() {
+            if (!window.scrollY) {
+                svgElements.forEach(function(element) {
+                    element.style.fill = '#152F65';
+                });
+                searchInput.style.borderRadius = "4px";
+                searchInput.style.background = "rgba(0, 0, 0, 0.1)";
+                searchInput.style.color = "#000000";
+                searchInput.setAttribute("data-placeholder-color", "black");
+            }
         });
-    });
 
-    headerItem.addEventListener("mouseout", function () {
-        if (window.scrollY > 0) {
-            header.style.backgroundColor = "#FFFFFF";
-            links.forEach(link => {
-                link.style.color = "#000000";
-            });
-        } else {
-            header.style.backgroundColor = "transparent";
-            links.forEach(link => {
-                link.style.color = "#FFFFFF";
-            });
+        headerItem.addEventListener('mouseleave', function() {
+            if (!window.scrollY) {
+                svgElements.forEach(function(element) {
+                    element.style.fill = '#FFFFFF';
+                });
+                searchInput.style.borderRadius = "";
+                searchInput.style.background = "";
+                searchInput.style.color = "#FFFFFF";
+            }
+        });
+
+        const header = document.querySelector(".header");
+        const links = document.querySelectorAll(".ul-list .link-group");
+        const svgPaths = document.querySelectorAll(".svg-item path");
+
+        if (!header || !headerItem || !searchInput || !svgPaths.length) {
+            return;
         }
-    });
 
-    window.addEventListener("scroll", function () {
-        if (window.scrollY > 0) {
-            header.style.backgroundColor = "#FFFFFF";
-            links.forEach(link => {
-                link.style.color = "#000000";
-            });
-            searchInput.style.borderRadius = "4px";
-            searchInput.style.background = "rgba(0, 0, 0, 0.1)";
-            searchInput.style.color = "#000000";
-            searchInput.setAttribute("data-placeholder-color", "black");
-            svgPaths.forEach(path => {
-                path.setAttribute("stroke", "#152F65");
-            });
-            svgElements.forEach(element => {
-                element.style.fill = '#152F65';
-            });
-        } else {
-            header.style.backgroundColor = "transparent";
-            links.forEach(link => {
-                link.style.color = "#FFFFFF";
-            });
-            searchInput.style.borderRadius = "";
-            searchInput.style.background = "";
-            searchInput.style.color = "#FFFFFF";
-            searchInput.removeAttribute("data-placeholder-color");
-            svgPaths.forEach(path => {
-                path.setAttribute("stroke", "#ffffff");
-            });
-            svgElements.forEach(element => {
-                element.style.fill = '#FFFFFF';
-            });
-        }
-    });
-
-    links.forEach(link => {
-        link.addEventListener("mouseover", function () {
+        headerItem.addEventListener("mouseover", function () {
             header.style.backgroundColor = "#FFFFFF";
             links.forEach(link => {
                 link.style.color = "#000000";
             });
         });
 
-        link.addEventListener("mouseout", function () {
+        headerItem.addEventListener("mouseout", function () {
             if (window.scrollY > 0) {
                 header.style.backgroundColor = "#FFFFFF";
                 links.forEach(link => {
@@ -346,9 +290,64 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
             }
         });
-    });
-});
 
+        window.addEventListener("scroll", function () {
+            if (window.scrollY > 0) {
+                header.style.backgroundColor = "#FFFFFF";
+                links.forEach(link => {
+                    link.style.color = "#000000";
+                });
+                searchInput.style.borderRadius = "4px";
+                searchInput.style.background = "rgba(0, 0, 0, 0.1)";
+                searchInput.style.color = "#000000";
+                searchInput.setAttribute("data-placeholder-color", "black");
+                svgPaths.forEach(path => {
+                    path.setAttribute("stroke", "#152F65");
+                });
+                svgElements.forEach(element => {
+                    element.style.fill = '#152F65';
+                });
+            } else {
+                header.style.backgroundColor = "transparent";
+                links.forEach(link => {
+                    link.style.color = "#FFFFFF";
+                });
+                searchInput.style.borderRadius = "";
+                searchInput.style.background = "";
+                searchInput.style.color = "#FFFFFF";
+                searchInput.removeAttribute("data-placeholder-color");
+                svgPaths.forEach(path => {
+                    path.setAttribute("stroke", "#ffffff");
+                });
+                svgElements.forEach(element => {
+                    element.style.fill = '#FFFFFF';
+                });
+            }
+        });
+
+        links.forEach(link => {
+            link.addEventListener("mouseover", function () {
+                header.style.backgroundColor = "#FFFFFF";
+                links.forEach(link => {
+                    link.style.color = "#000000";
+                });
+            });
+
+            link.addEventListener("mouseout", function () {
+                if (window.scrollY > 0) {
+                    header.style.backgroundColor = "#FFFFFF";
+                    links.forEach(link => {
+                        link.style.color = "#000000";
+                    });
+                } else {
+                    header.style.backgroundColor = "transparent";
+                    links.forEach(link => {
+                        link.style.color = "#FFFFFF";
+                    });
+                }
+            });
+        });
+    });
 
 document.addEventListener("DOMContentLoaded", function () {
     let headerItem = document.querySelector('.header-item');
@@ -471,127 +470,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
-document.addEventListener("DOMContentLoaded", function() {
-    let productList = document.querySelector('.phone-item-link .child-item.two');
-    let productButton = document.querySelector('.phone-item-link button:nth-child(2)');
-
-    productButton.addEventListener('click', function() {
-        let buttonList = document.querySelector('.phone-item-link .btn-link-item');
-        buttonList.classList.add('fade-out');
-        setTimeout(function() {
-            buttonList.style.display = 'none';
-            buttonList.classList.remove('fade-out');
-        }, 400);
-
-        productList.style.display = 'block';
-    });
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    let backButtons = document.querySelectorAll('.child-item a');
-
-    backButtons.forEach(function(button) {
-        button.addEventListener('click', function(event) {
-            event.preventDefault();
-
-            let productList = button.closest('.child-item');
-            productList.classList.add('fade-out');
-
-            setTimeout(function() {
-                productList.style.display = 'none';
-                productList.classList.remove('fade-out');
-            }, 400);
-
-            let buttonList = document.querySelector('.phone-item-link .btn-link-item');
-            buttonList.style.display = 'flex';
-        });
-    });
-});
-
-
-document.addEventListener("DOMContentLoaded", function() {
-    let sphereButton = document.querySelector('.phone-item-link button:nth-child(3)');
-    let productList = document.querySelector('.phone-item-link .child-item.two');
-    let backButton = document.querySelector('.phone-item-link .child-item.two a');
-
-    sphereButton.addEventListener('click', function() {
-        let buttonList = document.querySelector('.phone-item-link .btn-link-item');
-        buttonList.classList.add('fade-out');
-        setTimeout(function() {
-            buttonList.style.display = 'none';
-            buttonList.classList.remove('fade-out');
-        }, 400);
-
-        productList.style.display = 'block';
-    });
-
-    backButton.addEventListener('click', function() {
-        productList.classList.add('fade-out');
-        setTimeout(function() {
-            productList.style.display = 'none';
-            productList.classList.remove('fade-out');
-        }, 400);
-
-        let buttonList = document.querySelector('.phone-item-link .btn-link-item');
-        buttonList.style.display = 'flex';
-    });
-});
-
-document.addEventListener("DOMContentLoaded", function() {
-    let backButtonService = document.querySelector('.phone-item-link .child-item.three a');
-    let productListService = document.querySelector('.phone-item-link .child-item.three');
-    let serviceButton = document.querySelector('.phone-item-link button:nth-child(4)');
-
-    serviceButton.addEventListener('click', function() {
-        let buttonList = document.querySelector('.phone-item-link .btn-link-item');
-        buttonList.classList.add('fade-out');
-        setTimeout(function() {
-            buttonList.style.display = 'none';
-            buttonList.classList.remove('fade-out');
-        }, 400);
-
-        productListService.style.display = 'block';
-    });
-
-    backButtonService.addEventListener('click', function() {
-        productListService.classList.add('fade-out');
-        setTimeout(function() {
-            productListService.style.display = 'none';
-            productListService.classList.remove('fade-out');
-        }, 400);
-
-        let buttonList = document.querySelector('.phone-item-link .btn-link-item');
-        buttonList.style.display = 'flex';
-    });
-});
-
-document.addEventListener("DOMContentLoaded", function() {
-    let backButtonCompany = document.querySelector('.phone-item-link .child-item.four a');
-    let productListCompany = document.querySelector('.phone-item-link .child-item.four');
-    let companyButton = document.querySelector('.phone-item-link button:nth-child(5)');
-
-    companyButton.addEventListener('click', function() {
-        let buttonList = document.querySelector('.phone-item-link .btn-link-item');
-        buttonList.classList.add('fade-out');
-        setTimeout(function() {
-            buttonList.style.display = 'none';
-            buttonList.classList.remove('fade-out');
-        }, 400);
-
-        productListCompany.style.display = 'block';
-    });
-
-    backButtonCompany.addEventListener('click', function() {
-        productListCompany.classList.add('fade-out');
-        setTimeout(function() {
-            productListCompany.style.display = 'none';
-            productListCompany.classList.remove('fade-out');
-        }, 400);
-
-        let buttonList = document.querySelector('.phone-item-link .btn-link-item');
-        buttonList.style.display = 'flex';
-    });
-});
 
 document.addEventListener("DOMContentLoaded", function() {
     const selectItems = document.querySelectorAll(".decision-select-item");
@@ -711,3 +589,32 @@ modal.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+function scrollToElement(target) {
+    // Select the target element
+    const element = document.querySelector(target);
+
+    // Scroll the target element into view
+    if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+        // Show/hide child items based on the selected target
+        showHideChildItems(target);
+    }
+}
+
+function showHideChildItems(target) {
+    const childItems = document.querySelectorAll('.child-item');
+
+    childItems.forEach(item => {
+        item.style.opacity = '0';
+        item.style.visibility = 'hidden';
+    });
+
+    const selectedChildItem = document.querySelector(target);
+    if (selectedChildItem) {
+        selectedChildItem.style.opacity = '1';
+        selectedChildItem.style.visibility = 'visible';
+    }
+}
+
+
+

@@ -2,6 +2,10 @@
     .container {
         padding: 0 12px !important;
     }
+
+    .content {
+        overflow: hidden;
+    }
 }
 
 @media (max-width: 1024px) {
@@ -30,7 +34,7 @@
 
         .phone-nav-mn {
             pointer-events: auto;
-            height: calc(100vh - 68px);
+            height: calc(100vh);
             top: 68px;
         }
     }

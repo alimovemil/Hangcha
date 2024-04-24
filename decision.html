@@ -13,7 +13,7 @@
     <header class="header">
         <div class="container">
             <div class="header-item">
-                <a href="#" class="header-item-logo">
+                <a href="#" class="header-item-img">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 101.75 57">
                         <defs>
                             <style>.cls-1 {
@@ -116,11 +116,13 @@
                 <div class="input-btn">
                     <div class="header-search">
                         <input placeholder="Поиск" type="text">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M17 17L21 21" stroke="#152F65" stroke-width="2" stroke-linecap="round"
-                                  stroke-linejoin="round"/>
+                        <svg class="svg-item" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17 17L21 21"
+                                  stroke='#ffffff' stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             <path d="M3 11C3 15.4183 6.58172 19 11 19C13.213 19 15.2161 18.1015 16.6644 16.6493C18.1077 15.2022 19 13.2053 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11Z"
-                                  stroke="#152F65" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                  stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            />
                         </svg>
                     </div>
                     <div class="dropdown">
@@ -147,18 +149,19 @@
         </div>
         <div class="phone-nav-mn gdt">
             <div class="phone-item-link">
-                <div class="btn-link-item">
+                <div id="main-navigation" class="btn-link-item">
                     <a href="index.html">Главная</a>
-                    <button class="btn btn-phone">Сфера применения</button>
-                    <button class="btn btn-phone">Наши продукты</button>
-                    <button class="btn btn-phone">Сервис и запчасти</button>
-                    <button class="btn btn-phone">О компании</button>
-                    <button class="btn btn-phone">Контакты</button>
+                    <a href="#" class="btn btn-phone" onclick="scrollToElement('#sphere-of-application')">Сфера применения</a>
+                    <a href="#" class="btn btn-phone" onclick="scrollToElement('#product-section')">Наши продукты</a>
+                    <a href="#" class="btn btn-phone" onclick="scrollToElement('#service-section')">Сервис и запчасти</a>
+                    <a href="#" class="btn btn-phone" onclick="scrollToElement('#company-section')">О компании</a>
+                    <a href="#" class="btn btn-phone">Контакты</a>
                 </div>
-                <ul class="child-item one">
-                    <a href="#">Назад</a>
+                <ul id="sphere-of-application" class="child-item one">
+                    <a href="#" onclick="scrollToElement('#main-navigation')">Назад</a>
                     <li class="child-block">
                         <div class="child-inner">
+                            <a href="scope-of-application.html">Сферы Применения</a>
                             <a href="retail.html">Розница / Оптом</a>
                             <a href="#">Пищевая / Фармацевтическая <br> промышленность</a>
                             <a href="#">Транспорт / Логистика</a>
@@ -171,10 +174,11 @@
                         </div>
                     </li>
                 </ul>
-                <ul class="child-item two">
-                    <a href="#">Назад</a>
+                <ul id="product-section" class="child-item two">
+                    <a href="#" onclick="scrollToElement('#main-navigation')">Назад</a>
                     <li class="child-block">
                         <div class="child-inner">
+                            <a href="decision.html">Продукты</a>
                             <a href="#">Литий-ионные зарядные Погрузчики</a>
                             <a href="#">Дизельные погрузчики</a>
                             <a href="#">Транспалеты / Рохли</a>
@@ -184,8 +188,8 @@
                         </div>
                     </li>
                 </ul>
-                <ul class="child-item three">
-                    <a href="#">Назад</a>
+                <ul id="service-section" class="child-item three">
+                    <a href="#" onclick="scrollToElement('#main-navigation')">Назад</a>
                     <li class="child-block">
                         <div class="child-inner">
                             <a href="#">Запасные части</a>
@@ -193,8 +197,8 @@
                         </div>
                     </li>
                 </ul>
-                <ul class="child-item four">
-                    <a href="#">Назад</a>
+                <ul id="company-section" class="child-item four">
+                    <a href="#" onclick="scrollToElement('#main-navigation')">Назад</a>
                     <li class="child-block">
                         <div class="child-inner">
                             <a href="#">Hangcha</a>

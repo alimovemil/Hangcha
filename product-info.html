@@ -151,18 +151,19 @@
         </div>
         <div class="phone-nav-mn gdt">
             <div class="phone-item-link">
-                <div class="btn-link-item">
+                <div id="main-navigation" class="btn-link-item">
                     <a href="index.html">Главная</a>
-                    <button class="btn btn-phone">Сфера применения</button>
-                    <button class="btn btn-phone">Наши продукты</button>
-                    <button class="btn btn-phone">Сервис и запчасти</button>
-                    <button class="btn btn-phone">О компании</button>
-                    <button class="btn btn-phone">Контакты</button>
+                    <a href="#" class="btn btn-phone" onclick="scrollToElement('#sphere-of-application')">Сфера применения</a>
+                    <a href="#" class="btn btn-phone" onclick="scrollToElement('#product-section')">Наши продукты</a>
+                    <a href="#" class="btn btn-phone" onclick="scrollToElement('#service-section')">Сервис и запчасти</a>
+                    <a href="#" class="btn btn-phone" onclick="scrollToElement('#company-section')">О компании</a>
+                    <a href="#" class="btn btn-phone">Контакты</a>
                 </div>
-                <ul class="child-item one">
-                    <a href="#">Назад</a>
+                <ul id="sphere-of-application" class="child-item one">
+                    <a href="#" onclick="scrollToElement('#main-navigation')">Назад</a>
                     <li class="child-block">
                         <div class="child-inner">
+                            <a href="scope-of-application.html">Сферы Применения</a>
                             <a href="retail.html">Розница / Оптом</a>
                             <a href="#">Пищевая / Фармацевтическая <br> промышленность</a>
                             <a href="#">Транспорт / Логистика</a>
@@ -175,10 +176,11 @@
                         </div>
                     </li>
                 </ul>
-                <ul class="child-item two">
-                    <a href="#">Назад</a>
+                <ul id="product-section" class="child-item two">
+                    <a href="#" onclick="scrollToElement('#main-navigation')">Назад</a>
                     <li class="child-block">
                         <div class="child-inner">
+                            <a href="decision.html">Продукты</a>
                             <a href="#">Литий-ионные зарядные Погрузчики</a>
                             <a href="#">Дизельные погрузчики</a>
                             <a href="#">Транспалеты / Рохли</a>
@@ -188,8 +190,8 @@
                         </div>
                     </li>
                 </ul>
-                <ul class="child-item three">
-                    <a href="#">Назад</a>
+                <ul id="service-section" class="child-item three">
+                    <a href="#" onclick="scrollToElement('#main-navigation')">Назад</a>
                     <li class="child-block">
                         <div class="child-inner">
                             <a href="#">Запасные части</a>
@@ -197,8 +199,8 @@
                         </div>
                     </li>
                 </ul>
-                <ul class="child-item four">
-                    <a href="#">Назад</a>
+                <ul id="company-section" class="child-item four">
+                    <a href="#" onclick="scrollToElement('#main-navigation')">Назад</a>
                     <li class="child-block">
                         <div class="child-inner">
                             <a href="#">Hangcha</a>
@@ -232,21 +234,21 @@
             </div>
         </div>
     </header>
-    <div class="product-banner">
-        <div class="swiper-container i-product">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="product-block">
-                        <img src="/img/product-banner.png" alt="">
-                        <div class="product-title">
-                            <h1>ЭЛЕКТРИЧЕСКИЙ ВИЛОЧНЫЙ ПРОГРУЗЧИК СЕРИИ Х</h1>
-                            <p>грузоподъемностью от 6000 до 10000 кг</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<!--    <div class="product-banner">-->
+<!--        <div class="swiper-container i-product">-->
+<!--            <div class="swiper-wrapper">-->
+<!--                <div class="swiper-slide">-->
+<!--                    <div class="product-block">-->
+<!--                        <img src="/img/product-banner.png" alt="">-->
+<!--                        <div class="product-title">-->
+<!--                            <h1>ЭЛЕКТРИЧЕСКИЙ ВИЛОЧНЫЙ ПРОГРУЗЧИК СЕРИИ Х</h1>-->
+<!--                            <p>грузоподъемностью от 6000 до 10000 кг</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
     <main class="main">
         <div class="main-item">
             <div class="container">
