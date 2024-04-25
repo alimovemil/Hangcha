@@ -186,14 +186,6 @@
 
 @media (max-width: 768px) {
     .banner {
-        .slide-banner {
-            a {
-                .banner-text {
-                    top: 70px;
-                }
-            }
-        }
-
         .header {
             .header-item {
                 .header-item-img {
@@ -205,47 +197,38 @@
             }
         }
 
-        .banner-item {
-            .wrapper {
-                .slide-banner {
-                    .slide-item {
-                        height: 450px;
+        .slide-banner {
+            height: 450px;
 
-                        a {
-                            img {
-                                height: 100%;
-                                object-fit: cover;
-                            }
-                        }
+            .slide-item {
+                height: 100%;
 
-                        .banner-title {
-                            justify-content: flex-end;
+                .banner-title {
+                    justify-content: center;
 
-                            h1 {
-                                font-size: 30px;
-                                line-height: 30px;
-                            }
+                    h1 {
+                        font-size: 30px;
+                        line-height: 30px;
+                    }
 
-                            h1 br {
-                                display: none;
-                            }
+                    h1 br {
+                        display: none;
+                    }
 
-                            p {
-                                font-size: 16px;
-                                line-height: 20px;
-                            }
+                    p {
+                        font-size: 16px;
+                        line-height: 20px;
+                    }
 
-                            .btn-link {
-                                padding: 8px 20px;
-                            }
-                        }
+                    .btn-link {
+                        padding: 8px 20px;
                     }
                 }
             }
+        }
 
-            .swiper-pagination-item {
-                left: 60px;
-            }
+        .swiper-pagination-item {
+            left: 60px;
         }
     }
 
@@ -325,7 +308,6 @@
                 }
             }
         }
-
     }
 
     .main-info {
@@ -372,50 +354,42 @@
                 }
             }
 
-            .banner-item {
-                .wrapper {
-                    .slide-banner {
-                        height: 500px;
+            .slide-banner {
+                .slide-item {
+                    img {
+                        object-position: 70%;
+                    }
 
-                        .slide-item {
-                            a {
-                                img {
-                                    object-position: 70%;
-                                }
+                    .banner-title {
+                        gap: 7px;
+                        justify-content: center;
 
-                                .banner-title {
-                                    gap: 7px;
-                                    justify-content: center;
+                        h1 {
+                            font-size: 30px;
+                            line-height: 1.2;
+                            padding-bottom: 0;
+                        }
 
-                                    h1 {
-                                        font-size: 30px;
-                                        line-height: 1.2;
-                                        padding-bottom: 0;
-                                    }
+                        p {
+                            font-size: 14px;
+                            line-height: 1.2;
+                            padding-bottom: 0;
+                        }
 
-                                    p {
-                                        font-size: 14px;
-                                        line-height: 1.2;
-                                        padding-bottom: 0;
-                                    }
+                        p br {
+                            display: none;
+                        }
 
-                                    p br {
-                                        display: none;
-                                    }
-
-                                    .btn-link {
-                                        font-size: 12px;
-                                        max-width: 143px;
-                                    }
-                                }
-                            }
+                        .btn-link {
+                            font-size: 12px;
+                            max-width: 143px;
                         }
                     }
                 }
+            }
 
-                .swiper-pagination-item {
-                    left: 19px;
-                }
+            .swiper-pagination-item {
+                left: 19px;
             }
         }
 
@@ -577,28 +551,6 @@
                     a {
                         img {
                             width: 50px;
-                        }
-                    }
-                }
-            }
-
-            .banner-item {
-                .wrapper {
-                    .slide-banner {
-                        .banner-title {
-                            gap: 5px;
-
-                            h1 {
-                                font-size: 12px;
-                            }
-
-                            p {
-                                font-size: 10px;
-                            }
-
-                            .btn-link {
-                                font-size: 10px;
-                            }
                         }
                     }
                 }

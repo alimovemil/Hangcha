@@ -147,7 +147,7 @@
 
         .header {
             .header-item {
-                .header-item-logo {
+                .header-item-img {
                     svg {
                         height: 40px;
                         width: auto;
@@ -312,6 +312,16 @@
 }
 
 @media (max-width: 450px) {
+    .modals {
+        overflow: auto !important;
+
+        .modal-content {
+            .modal-block {
+                flex-direction: column;
+            }
+        }
+    }
+
     .content {
         .header {
             .header-item {
@@ -385,6 +395,7 @@
                 img {
                     height: 100%;
                     object-fit: cover;
+                    object-position: 62%;
                 }
             }
 
@@ -525,6 +536,18 @@
 }
 
 @media (max-width: 376px) {
+    .modals {
+        .modal-content {
+            margin: 15% auto;
+
+            .modal-block {
+                .modal-img {
+
+                }
+            }
+        }
+    }
+
     .content {
         .header {
             .header-item {
@@ -567,6 +590,36 @@
 }
 
 @media (max-width: 320px) {
+    .modals {
+        .modal-content {
+            .modal-block {
+                .modal-img {
+                    .modal-meta {
+                        width: auto;
+                        height: auto;
+                    }
+                }
+            }
+
+            .form {
+                .form-link {
+                    flex-direction: column;
+
+                     a {
+                         display: block;
+                         width: 100%;
+                     }
+                }
+
+                .form-item {
+                    .form-block {
+                        flex-direction: column;
+                    }
+                }
+            }
+        }
+    }
+
     .content {
         .header {
             .header-item {

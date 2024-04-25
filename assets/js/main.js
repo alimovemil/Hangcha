@@ -260,7 +260,26 @@ document.addEventListener("DOMContentLoaded", function () {
             });
             searchInput.style.borderRadius = "";
             searchInput.style.background = "";
-            searchInput.style.color = "#FFFFFF";
+            searchInput.removeAttribute("data-placeholder-color");
+            if (searchInput.getAttribute("data-placeholder-color") !== "black") {
+                searchInput.style.color = "#FFFFFF";
+            }
+        }
+    });
+
+    searchInput.addEventListener('mouseenter', function () {
+        if (!window.scrollY) {
+            if (searchInput.getAttribute("data-placeholder-color") === "black") {
+                searchInput.style.color = "#000000";
+            }
+        }
+    });
+
+    searchInput.addEventListener('mouseleave', function () {
+        if (!window.scrollY) {
+            if (searchInput.getAttribute("data-placeholder-color") === "black") {
+                searchInput.style.color = "#FFFFFF";
+            }
         }
     });
 
@@ -318,7 +337,6 @@ document.addEventListener("DOMContentLoaded", function () {
             });
             searchInput.style.borderRadius = "";
             searchInput.style.background = "";
-            searchInput.style.color = "#FFFFFF";
             searchInput.removeAttribute("data-placeholder-color");
             svgPaths.forEach(path => {
                 path.setAttribute("stroke", "#ffffff");
@@ -441,23 +459,16 @@ window.addEventListener('scroll', function () {
 let swiperbanner = new Swiper('.banner-item', {
     slidesPerView: 1,
     spaceBetween: 0,
-    centeredSlides: true,
-    centeredSlidesBounds: true,
-    speed: 800,
     loop: true,
-    autoplay: {
-        delay: 5000,
-    },
-    navigation: {
-        prevEl: '.banner-item .i-page.next',
-        nextEl: '.banner-item .i-page.prev',
-    },
+    speed: 800,
+    // autoplay: {
+    //     delay: 3000,
+    // },
     pagination: {
         el: '.banner-item .swiper-pagination',
         clickable: true,
     },
 });
-
 
 
 let swipergallery = new Swiper('.i-gallery', {

@@ -692,6 +692,8 @@ ul {
 }
 
 .main {
+    padding-top: 80px;
+
     .main-title {
         display: flex;
         flex-direction: column;

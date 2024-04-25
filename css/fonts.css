@@ -10,7 +10,7 @@
 }
 
 @font-face {
-    font-family: "Montserrat-Regural";
+    font-family: "Montserrat-Regular";
     src: url("../fonts/Montserrat-Regular.eot");
     src: url("../fonts/Montserrat-Regular.eot?#iefix") format("embedded-opentype"),
     url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff"),
@@ -24,7 +24,7 @@
     font-family: "Roboto-Bold";
     src: url("../fonts/RobotoCondensed-Bold.eot");
     src: url("../fonts/RobotoCondensed-Bold.eot?#iefix") format("embedded-opentype"),
-    url("/fonts/RobotoCondensed-Bold.woff2") format("woff2"), url("../fonts/RobotoCondensed-Bold.woff") format("woff"),
+    url("../fonts/RobotoCondensed-Bold.woff2") format("woff2"), url("/fonts/RobotoCondensed-Bold.woff") format("woff"),
     url("/fonts/RobotoCondensed-Bold.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
@@ -43,10 +43,10 @@
 }
 
 @font-face {
-    font-family: "Roboto-Regural";
+    font-family: "Roboto-Regular";
     src: url("../fonts/RobotoCondensed-Regular.eot");
     src: url("../fonts/RobotoCondensed-Regular.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/RobotoCondensed-Medium.woff2") format("woff2"), url("../fonts/RobotoCondensed-Medium.woff") format("woff"),
+    url("../fonts/RobotoCondensed-Regular.woff2") format("woff2"), url("../fonts/RobotoCondensed-Regular.woff") format("woff"),
     url("../fonts/RobotoCondensed-Regular.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;

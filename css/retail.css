@@ -616,16 +616,19 @@ ul {
         padding: 8px 12px 8px 46px;
         max-width: 209px;
         width: 100%;
-        color: #000000 !important;
         background: rgba(255, 255, 255, 0.1);
+    }
 
-        input::-webkit-input-placeholder {
-            font-family: "Montserrat-Regural", sans-serif;
-            line-height: 24px;
-            opacity: 0.5;
-            color: #FFFFFF;
-            font-weight: 400;
-        }
+    input::-webkit-input-placeholder {
+        font-family: "Montserrat-Regural", sans-serif;
+        line-height: 24px;
+        opacity: 0.5;
+        color: #FFFFFF;
+        font-weight: 400;
+    }
+
+    input[data-placeholder-color="black"]::placeholder {
+        color: #000000;
     }
 
     svg {
@@ -636,9 +639,7 @@ ul {
         cursor: pointer;
     }
 }
-input[data-placeholder-color="black"]::placeholder {
-    color: #000000;
-}
+
 .input-btn {
     display: flex;
     align-items: center;

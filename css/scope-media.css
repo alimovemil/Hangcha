@@ -128,7 +128,7 @@
     .content {
         .header {
             .header-item {
-                .header-item-scope {
+                .header-item-img {
                     svg {
                         height: 40px;
                         width: auto;
@@ -154,10 +154,13 @@
 
     .section {
         .main {
+            padding-top: 50px;
+
             .main-title {
                 h1 {
-                    font-size: 42px;
+                    font-size: 41px;
                     line-height: 1.2;
+                    text-align: center;
                 }
 
                 p {
@@ -223,7 +226,7 @@
         .main {
             .main-title {
                 h1 {
-                    font-size: 37px;
+                    font-size: 36px;
                     line-height: 1.2;
                 }
 
@@ -240,7 +243,7 @@
                     }
 
                     h2 {
-                        font-size: 35px;
+                        font-size: 34px;
                     }
                 }
             }
@@ -275,7 +278,7 @@
         .main {
             .main-title {
                 h1 {
-                    font-size: 32px;
+                    font-size: 30px;
                     line-height: 1.2;
                 }
 
@@ -290,7 +293,7 @@
 
 
                     h2 {
-                        font-size: 30px;
+                        font-size: 29px;
                     }
                 }
             }
