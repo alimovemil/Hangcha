@@ -461,9 +461,9 @@ let swiperbanner = new Swiper('.banner-item', {
     spaceBetween: 0,
     loop: true,
     speed: 800,
-    // autoplay: {
-    //     delay: 3000,
-    // },
+    autoplay: {
+        delay: 3000,
+    },
     pagination: {
         el: '.banner-item .swiper-pagination',
         clickable: true,
