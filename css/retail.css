@@ -395,6 +395,11 @@ ul {
             visibility: hidden;
             z-index: 4;
 
+            .child-item-back:before {
+                content: '\3008';
+                float: left;
+                margin-right: 1em;
+            }
 
             .child-block {
                 list-style: none;
@@ -427,6 +432,12 @@ ul {
                 color: #FFFFFF;
                 padding: 0;
                 box-shadow: none;
+
+                &:before {
+                    content: '\3009';
+                    float: right;
+                    margin-left: 1em;
+                }
             }
 
             a {

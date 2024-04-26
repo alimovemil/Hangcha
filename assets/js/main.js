@@ -542,9 +542,19 @@ document.addEventListener("DOMContentLoaded", function () {
                     item.querySelector("img").classList.remove("rotate");
                 }
             });
+
+            if (!isOpen) {
+                setTimeout(() => {
+                    checkboxBlocks[index].style.maxHeight = checkboxBlocks[index].scrollHeight + "px";
+                }, 10);
+            } else {
+                checkboxBlocks[index].style.maxHeight = null;
+            }
         });
     });
 });
+
+
 
 let labels = document.querySelectorAll('.label input');
 labels.forEach(function (input) {
@@ -557,18 +567,19 @@ labels.forEach(function (input) {
         }
     });
 });
-
 document.addEventListener("DOMContentLoaded", function () {
     const featuresArrows = document.querySelectorAll('.features-arrow');
+
     featuresArrows.forEach(function (featuresArrow) {
         featuresArrow.addEventListener('click', function () {
             const parentFeaturesInfo = this.closest('.features-info');
             const featuresSelect = parentFeaturesInfo.querySelector('.features-select');
 
             const allFeaturesSelects = document.querySelectorAll('.features-select');
+
             allFeaturesSelects.forEach(function (select) {
                 if (select !== featuresSelect) {
-                    select.style.display = 'none';
+                    select.style.maxHeight = '0';
                 }
             });
 
@@ -581,14 +592,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
             if (!this.classList.contains('active')) {
                 this.classList.add('active');
-                featuresSelect.style.display = 'block';
+                featuresSelect.style.maxHeight = featuresSelect.scrollHeight + 'px';
             } else {
                 this.classList.remove('active');
-                featuresSelect.style.display = 'none';
+                featuresSelect.style.maxHeight = '0';
             }
         });
     });
 });
+
 
 function updateText(checkbox) {
     let label = checkbox.closest('.decision-checkbox').previousElementSibling.querySelector('.decision-select-item span');
