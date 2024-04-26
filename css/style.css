@@ -222,7 +222,7 @@ html {
 
 body {
     background: #ffffff;
-    font-family: "Montserrat-Medium", sans-serif;
+    font-family: "Montserrat Medium", sans-serif;
     color: #000;
     overflow-y: scroll;
     box-sizing: border-box;
@@ -247,7 +247,7 @@ h2 {
     line-height: 40px;
     font-weight: 500;
     margin: 0;
-    font-family: "Roboto-Medium", sans-serif;
+    font-family: "Roboto Medium", sans-serif;
     color: #FFFFFF;
 }
 
@@ -256,7 +256,7 @@ h1 {
     line-height: 86px;
     font-weight: 700;
     margin: 0;
-    font-family: "Roboto-Bold", sans-serif;
+    font-family: "Roboto Bold", sans-serif;
     color: #FFFFFF;
 }
 
@@ -291,7 +291,7 @@ a {
 p {
     line-height: 26px;
     margin-bottom: 0;
-    font-family: "Montserrat-Regural", sans-serif;
+    font-family: "Montserrat Regural", sans-serif;
 }
 
 
@@ -500,7 +500,7 @@ ul {
         font-size: 14px;
         z-index: 2;
         color: #000000;
-        font-family: "Montserrat-Regural", sans-serif;
+        font-family: "Montserrat Regural", sans-serif;
         line-height: 22px;
         padding: 6px 0;
     }
@@ -598,7 +598,7 @@ ul {
         color: #FFFFFF;
         line-height: 28px;
         font-size: 20px;
-        font-family: "Montserrat-Regural", sans-serif;
+        font-family: "Montserrat Regural", sans-serif;
         padding-bottom: 24px;
         display: block;
     }
@@ -663,7 +663,7 @@ ul {
     }
 
     input::-webkit-input-placeholder {
-        font-family: "Montserrat-Regural", sans-serif;
+        font-family: "Montserrat Regural", sans-serif;
         line-height: 24px;
         opacity: 0.5;
         color: #FFFFFF;
@@ -792,7 +792,7 @@ ul {
                     font-size: 20px;
                     line-height: 28px;
                     color: #FFFFFF;
-                    font-family: "Montserrat-Regural", sans-serif;
+                    font-family: "Montserrat Regural", sans-serif;
                 }
             }
         }
@@ -855,7 +855,7 @@ h1 {
 p {
     font-size: 32px;
     line-height: 40px;
-    font-family: "Montserrat-Medium", sans-serif;
+    font-family: "Montserrat Medium", sans-serif;
 }
 
 .btn-solution {
@@ -977,7 +977,7 @@ iframe {
 
         p {
             font-size: 32px;
-            font-family: "Montserrat-Medium", sans-serif;
+            font-family: "Montserrat Medium", sans-serif;
             line-height: 40px;
         }
     }
@@ -1054,7 +1054,7 @@ iframe {
 
                         a {
                             font-size: 12px;
-                            font-family: "Montserrat-Regural", sans-serif;
+                            font-family: "Montserrat Regural", sans-serif;
                             line-height: 20px;
                             display: inline-block;
                             color: #FFFFFF !important;
@@ -1099,7 +1099,7 @@ iframe {
                     gap: 12px;
 
                     a {
-                        font-family: "Roboto-Regural", sans-serif;
+                        font-family: "Roboto Regural", sans-serif;
                         font-size: 24px;
                         line-height: 32px;
                         color: #FFFFFF !important;

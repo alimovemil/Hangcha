@@ -222,7 +222,7 @@ html {
 
 body {
     background: #ffffff;
-    font-family: "Montserrat-Medium", sans-serif;
+    font-family: "Montserrat Medium", sans-serif;
     color: #000;
     overflow-y: scroll;
     box-sizing: border-box;
@@ -242,7 +242,7 @@ h6 {
 }
 
 h3 {
-    font-family: "Roboto-Bold", sans-serif;
+    font-family: "Roboto Bold", sans-serif;
 }
 
 h2 {
@@ -250,7 +250,7 @@ h2 {
     line-height: 40px;
     font-weight: 500;
     margin: 0;
-    font-family: "Roboto-Medium", sans-serif;
+    font-family: "Roboto Medium", sans-serif;
     color: #FFFFFF;
 }
 
@@ -259,7 +259,7 @@ h1 {
     line-height: 86px;
     font-weight: 700;
     margin: 0;
-    font-family: "Roboto-Bold", sans-serif;
+    font-family: "Roboto Bold", sans-serif;
     color: #FFFFFF;
 }
 
@@ -294,11 +294,11 @@ a {
 p {
     line-height: 26px;
     margin-bottom: 0;
-    font-family: "Roboto-Bold", sans-serif;
+    font-family: "Roboto Bold", sans-serif;
 }
 
 span {
-    font-family: "Montserrat-Regural", sans-serif;
+    font-family: "Montserrat Regural", sans-serif;
 }
 
 ul {
@@ -506,7 +506,7 @@ ul {
         font-size: 14px;
         z-index: 2;
         color: #000000;
-        font-family: "Roboto-Regural", sans-serif;
+        font-family: "Roboto Regural", sans-serif;
         line-height: 22px;
         padding: 6px 0;
     }
@@ -653,7 +653,7 @@ ul {
                 font-size: 20px;
                 line-height: 28px;
                 color: #FFFFFF;
-                font-family: "Montserrat-Regural", sans-serif;
+                font-family: "Montserrat Regural", sans-serif;
             }
         }
     }
@@ -676,7 +676,7 @@ ul {
 
         &::placeholder {
             color: #000000;
-            font-family: "Montserrat-Regural", sans-serif;
+            font-family: "Montserrat Regural", sans-serif;
             line-height: 24px;
             opacity: 0.5;
         }
@@ -839,7 +839,7 @@ ul {
                     p {
                         font-size: 20px;
                         line-height: 28px;
-                        font-family: "Montserrat-Regural", sans-serif;
+                        font-family: "Montserrat Regural", sans-serif;
                         position: relative;
                         color: #152F65;
                         left: 30px;
@@ -947,7 +947,7 @@ ul {
                     gap: 10px;
 
                     h6 {
-                        font-family: "Montserrat-SemiBold", sans-serif;
+                        font-family: "Montserrat SemiBold", sans-serif;
                         font-size: 20px;
                         line-height: 28px;
                         font-weight: 600;
@@ -957,7 +957,7 @@ ul {
                         display: none;
 
                         p {
-                            font-family: "Montserrat-SemiBold", sans-serif;
+                            font-family: "Montserrat SemiBold", sans-serif;
                             font-size: 14px;
                             line-height: 28px;
                             font-weight: 600;
@@ -1061,7 +1061,7 @@ ul {
 
             p {
                 font-size: 32px;
-                font-family: "Montserrat-Medium", sans-serif;
+                font-family: "Montserrat Medium", sans-serif;
             }
         }
 
@@ -1142,7 +1142,7 @@ ul {
                 }
 
                 p {
-                    font-family: "Roboto-Regural", sans-serif;
+                    font-family: "Roboto Regural", sans-serif;
                     font-size: 14px;
                     line-height: 22px;
                     color: #000000;
@@ -1207,7 +1207,7 @@ ul {
 
                         a {
                             font-size: 12px;
-                            font-family: "Montserrat-Regural", sans-serif;
+                            font-family: "Montserrat Regural", sans-serif;
                             line-height: 20px;
                             display: inline-block;
                             color: #FFFFFF !important;
@@ -1252,7 +1252,7 @@ ul {
                     gap: 12px;
 
                     a {
-                        font-family: "Roboto-Regural", sans-serif;
+                        font-family: "Roboto Regural", sans-serif;
                         font-size: 24px;
                         line-height: 32px;
                         color: #FFFFFF !important;
@@ -1391,7 +1391,7 @@ ul {
                         font-size: 12px;
                         color: #000000;
                         line-height: 12px;
-                        font-family: "Montserrat-Regural", sans-serif;
+                        font-family: "Montserrat Regural", sans-serif;
                         font-weight: 400;
                         opacity: 0.5;
                     }

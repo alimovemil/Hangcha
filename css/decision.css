@@ -222,7 +222,7 @@ html {
 
 body {
     background: #ffffff;
-    font-family: "Montserrat-Medium", sans-serif;
+    font-family: "Montserrat Medium", sans-serif;
     color: #000;
     overflow-y: scroll;
     box-sizing: border-box;
@@ -246,7 +246,7 @@ h2 {
     line-height: 40px;
     font-weight: 700;
     margin: 0;
-    font-family: "Roboto-Bold", sans-serif;
+    font-family: "Roboto Bold", sans-serif;
     color: #FFFFFF;
 }
 
@@ -255,7 +255,7 @@ h1 {
     line-height: 56px;
     font-weight: 700;
     margin: 0;
-    font-family: "Roboto-Bold", sans-serif;
+    font-family: "Roboto Bold", sans-serif;
     color: #FFFFFF;
 }
 
@@ -290,7 +290,7 @@ a {
 p {
     line-height: 26px;
     margin-bottom: 0;
-    font-family: "Roboto-Medium", sans-serif;
+    font-family: "Roboto Medium", sans-serif;
     font-weight: 500;
 }
 
@@ -496,7 +496,7 @@ ul {
         font-size: 14px;
         z-index: 2;
         color: #000000;
-        font-family: "Roboto-Regural", sans-serif;
+        font-family: "Roboto Regural", sans-serif;
         line-height: 22px;
         padding: 6px 0;
     }
@@ -631,7 +631,7 @@ ul {
 
         &::placeholder {
             color: #000000;
-            font-family: "Montserrat-Regural", sans-serif;
+            font-family: "Montserrat Regural", sans-serif;
             line-height: 24px;
         }
     }
@@ -739,7 +739,7 @@ ul {
                             color: #FFFFFF;
                             width: 100%;
                             text-align: left;
-                            font-family: "Roboto-Medium", sans-serif;
+                            font-family: "Roboto Medium", sans-serif;
                         }
 
                         .decision-select-item {
@@ -928,7 +928,7 @@ ul {
             }
 
             h3 {
-                font-family: "Montserrat-Bold", sans-serif;
+                font-family: "Montserrat Bold", sans-serif;
                 font-size: 16px;
                 line-height: 22px;
             }
@@ -944,7 +944,7 @@ ul {
                     padding: 3px 0;
 
                     p {
-                        font-family: "Montserrat-SemiBold", sans-serif;
+                        font-family: "Montserrat SemiBold", sans-serif;
                         font-size: 14px;
                         line-height: 22px;
                     }
@@ -1015,7 +1015,7 @@ ul {
 
                         a {
                             font-size: 12px;
-                            font-family: "Montserrat-Regural", sans-serif;
+                            font-family: "Montserrat Regural", sans-serif;
                             line-height: 20px;
                             display: inline-block;
                             color: #FFFFFF !important;

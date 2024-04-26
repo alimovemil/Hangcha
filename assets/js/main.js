@@ -470,7 +470,6 @@ let swiperbanner = new Swiper('.banner-item', {
     },
 });
 
-
 let swipergallery = new Swiper('.i-gallery', {
     slidesPerView: 3,
     spaceBetween: 0,
