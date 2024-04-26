@@ -417,8 +417,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-
-
 document.addEventListener("DOMContentLoaded", function () {
     const headerInner = document.querySelector(".header-inner");
     const searchInputItem = document.querySelector(".header-search-item input");
@@ -554,8 +552,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-
-
 let labels = document.querySelectorAll('.label input');
 labels.forEach(function (input) {
     input.addEventListener('click', function () {
@@ -601,7 +597,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-
 function updateText(checkbox) {
     let label = checkbox.closest('.decision-checkbox').previousElementSibling.querySelector('.decision-select-item span');
     let total = checkbox.closest('.decision-checkbox').previousElementSibling.querySelector('.decision-select-item .total');
@@ -635,28 +630,28 @@ checkboxes.forEach(function (checkbox) {
     });
 });
 
-let openModalBtn = document.getElementById("openModal");
+document.addEventListener("DOMContentLoaded", function() {
+    let openModalBtn = document.getElementById("openModal");
+    let modal = document.getElementById("myModal");
 
-let modal = document.getElementById("myModal");
+    if (openModalBtn && modal) {
+        openModalBtn.onclick = function () {
+            modal.style.display = "block";
+        }
 
-openModalBtn.onclick = function () {
-    modal.style.display = "block";
-}
-
-modal.onclick = function (event) {
-    if (event.target === modal) {
-        modal.style.display = "none";
+        modal.onclick = function (event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        }
     }
-}
+});
 
 function scrollToElement(target) {
-    // Select the target element
     const element = document.querySelector(target);
 
-    // Scroll the target element into view
     if (element) {
         element.scrollIntoView({behavior: 'smooth'});
-        // Show/hide child items based on the selected target
         showHideChildItems(target);
     }
 }
