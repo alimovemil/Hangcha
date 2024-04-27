@@ -538,6 +538,7 @@ document.addEventListener("DOMContentLoaded", function () {
             selectItems.forEach((item, idx) => {
                 if (idx !== index) {
                     item.querySelector("img").classList.remove("rotate");
+                    checkboxBlocks[idx].style.maxHeight = null;
                 }
             });
 
@@ -551,6 +552,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
 
 let labels = document.querySelectorAll('.label input');
 labels.forEach(function (input) {
