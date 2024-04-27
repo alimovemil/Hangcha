@@ -546,12 +546,16 @@ ul {
 
 
 .slide-banner {
-
     img {
         width: 100%;
     }
 }
 
+.banner {
+    img {
+        width: 100%;
+    }
+}
 .banner-title {
     position: absolute;
     left: 57%;

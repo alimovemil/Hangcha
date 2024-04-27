@@ -1,3 +1,107 @@
+@media (max-width: 6830px) {
+    .content {
+        .banner {
+            .swipe-pagination {
+                left: 39.5%;
+            }
+        }
+
+        .main-inner {
+            .main-meta {
+                .container {
+                    max-width: none;
+                    margin: 0;
+                }
+
+                .main-content {
+                    flex-wrap: nowrap;
+
+                    .main-block {
+                        width: 100%;
+
+                        .main-img {
+                            width: 100%;
+
+                            img {
+                                width: 100%;
+                                object-fit: cover;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .main-solution {
+                .container {
+                    max-width: none;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 5122px) {
+    .content {
+        .banner {
+            .swipe-pagination {
+                left: 36%;
+            }
+        }
+    }
+}
+
+@media (max-width: 3400px) {
+    .content {
+        .banner {
+            .swipe-pagination {
+                left: 22%;
+            }
+        }
+    }
+}
+
+@media (max-width: 2276px) {
+    .content {
+        .banner {
+            .swipe-pagination {
+                left: 16%;
+            }
+        }
+
+
+    }
+}
+
+
+@media (max-width: 1920px) {
+    .content {
+        .banner {
+            .swipe-pagination {
+                left: 125px;
+            }
+        }
+
+        .main-inner {
+            .main-meta {
+                .container {
+                    max-width: 1440px;
+                    margin-right: auto;
+                    margin-left: auto;
+                }
+            }
+
+            .main-solution {
+                .container {
+                    max-width: 1440px;
+                    margin-right: auto;
+                    margin-left: auto;
+                }
+            }
+        }
+    }
+}
+
 @media (max-width: 1440px) {
     .container {
         padding: 0 12px !important;
@@ -10,20 +114,13 @@
             .slide-item {
                 height: 700px;
 
-                a {
-                    .banner-text {
-                        left: 60px;
-                    }
-
-                    img {
-                        height: 100%;
-                        object-fit: cover;
-                    }
+                .banner-title {
+                    padding-left: 48px;
                 }
             }
 
             .swiper-pagination {
-                left: 12px;
+                left: 64px;
             }
         }
     }
@@ -185,54 +282,60 @@
 }
 
 @media (max-width: 768px) {
-    .banner {
-        .header {
-            .header-item {
-                .header-item-img {
-                    svg {
-                        height: 40px;
-                        width: auto;
-                    }
-                }
-            }
-        }
-
-        .slide-banner {
-            height: 450px;
-
-            .slide-item {
-                height: 100%;
-
-                .banner-title {
-                    justify-content: center;
-
-                    h1 {
-                        font-size: 30px;
-                        line-height: 30px;
-                    }
-
-                    h1 br {
-                        display: none;
-                    }
-
-                    p {
-                        font-size: 16px;
-                        line-height: 20px;
-                    }
-
-                    .btn-link {
-                        padding: 8px 20px;
-                    }
-                }
-            }
-        }
-
-        .swiper-pagination-item {
-            left: 60px;
-        }
-    }
 
     .content {
+        .banner {
+            .swiper-pagination {
+                left: 34px;
+            }
+
+            .header {
+                .header-item {
+                    .header-item-img {
+                        svg {
+                            height: 40px;
+                            width: auto;
+                        }
+                    }
+                }
+            }
+
+            .slide-banner {
+                height: 450px;
+
+                .slide-item {
+                    height: 100%;
+
+                    .banner-title {
+                        justify-content: center;
+                        padding-left: 19px;
+
+                        h1 {
+                            font-size: 30px;
+                            line-height: 30px;
+                        }
+
+                        h1 br {
+                            display: none;
+                        }
+
+                        p {
+                            font-size: 16px;
+                            line-height: 20px;
+                        }
+
+                        .btn-link {
+                            padding: 8px 20px;
+                        }
+                    }
+                }
+            }
+
+            .swiper-pagination-item {
+                left: 60px;
+            }
+        }
+
         .main-meta {
             .main-content {
                 flex-wrap: nowrap;
