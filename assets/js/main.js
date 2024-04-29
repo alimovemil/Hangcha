@@ -553,7 +553,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-
 let labels = document.querySelectorAll('.label input');
 labels.forEach(function (input) {
     input.addEventListener('click', function () {
@@ -672,6 +671,3 @@ function showHideChildItems(target) {
         selectedChildItem.style.visibility = 'visible';
     }
 }
-
-
-

@@ -1,14 +1,306 @@
+@media (min-width: 2020px) {
+    html, body {
+        font-size: 1.125rem !important;
+    }
+}
+
+@media (min-width: 2120px) {
+    html, body {
+        font-size: 1.188rem !important;
+    }
+}
+
+@media (min-width: 2220px) {
+    html, body {
+        font-size: 1.25rem !important;
+    }
+}
+
+@media (min-width: 2320px) {
+    html, body {
+        font-size: 1.313rem !important;
+    }
+}
+
+@media (min-width: 2420px) {
+    html, body {
+        font-size: 1.375rem !important;
+    }
+}
+
+@media (min-width: 2520px) {
+    html, body {
+        font-size: 1.438rem !important;
+    }
+}
+
+@media (min-width: 2620px) {
+    html, body {
+        font-size: 1.5rem !important;
+    }
+}
+
+@media (min-width: 2720px) {
+    html, body {
+        font-size: 1.563rem !important;
+    }
+}
+
+@media (min-width: 2820px) {
+    html, body {
+        font-size: 1.625rem !important;
+    }
+}
+
+@media (min-width: 2920px) {
+    html, body {
+        font-size: 1.688rem !important;
+    }
+}
+
+@media (min-width: 3020px) {
+    html, body {
+        font-size: 1.75rem !important;
+    }
+}
+
+@media (min-width: 3120px) {
+    html, body {
+        font-size: 1.813rem !important;
+    }
+}
+
+@media (min-width: 3220px) {
+    html, body {
+        font-size: 1.875rem !important;
+    }
+}
+
+@media (min-width: 3320px) {
+    html, body {
+        font-size: 1.938rem !important;
+    }
+}
+
+@media (min-width: 3420px) {
+    html, body {
+        font-size: 2rem !important;
+    }
+}
+
+@media (min-width: 3520px) {
+    html, body {
+        font-size: 2.063rem !important;
+    }
+}
+
+@media (min-width: 3620px) {
+    html {
+        font-size: 2.125rem !important;
+    }
+}
+
+@media (min-width: 3720px) {
+    html, body {
+        font-size: 2.188rem !important;
+    }
+}
+
+@media (min-width: 3820px) {
+    html, body {
+        font-size: 2.25rem !important;
+    }
+}
+
+@media (min-width: 3920px) {
+    html, body {
+        font-size: 2.313rem !important;
+    }
+}
+
+@media (min-width: 4020px) {
+    html, body {
+        font-size: 2.375rem !important;
+    }
+}
+
+@media (min-width: 4120px) {
+    html, body {
+        font-size: 2.438rem !important;
+    }
+}
+
+@media (min-width: 4220px) {
+    html, body {
+        font-size: 2.5rem !important;
+    }
+}
+
+@media (min-width: 4320px) {
+    html, body {
+        font-size: 2.563rem !important;
+    }
+}
+
+@media (min-width: 4420px) {
+    html, body {
+        font-size: 2.625rem !important;
+    }
+}
+
+@media (min-width: 4520px) {
+    html, body {
+        font-size: 2.688rem !important;
+    }
+}
+
+@media (min-width: 4620px) {
+    html, body {
+        font-size: 2.75rem !important;
+    }
+}
+
+@media (min-width: 4720px) {
+    html, body {
+        font-size: 2.813rem !important;
+    }
+}
+
+@media (min-width: 4820px) {
+    html, body {
+        font-size: 2.875rem !important;
+    }
+}
+
+@media (min-width: 4920px) {
+    html, body {
+        font-size: 2.938rem !important;
+    }
+}
+
+@media (min-width: 5020px) {
+    html, body {
+        font-size: 3rem !important;
+    }
+}
+
+@media (min-width: 5120px) {
+    html, body {
+        font-size: 3.063rem !important;
+    }
+}
+
+@media (min-width: 5220px) {
+    html, body {
+        font-size: 3.125rem !important;
+    }
+}
+
+@media (min-width: 5320px) {
+    html, body {
+        font-size: 3.188rem !important;
+    }
+}
+
+@media (min-width: 5420px) {
+    html, body {
+        font-size: 3.25rem !important;
+    }
+}
+
+@media (min-width: 5620px) {
+    html, body {
+        font-size: 3.313rem !important;
+    }
+}
+
+@media (min-width: 5720px) {
+    html, body {
+        font-size: 3.375rem !important;
+    }
+}
+
+@media (min-width: 5820px) {
+    html, body {
+        font-size: 3.438rem !important;
+    }
+}
+
+@media (min-width: 5920px) {
+    html, body {
+        font-size: 3.5rem !important;
+    }
+}
+
+@media (min-width: 6020px) {
+    html, body {
+        font-size: 3.563rem !important;
+    }
+}
+
+@media (min-width: 6120px) {
+    html, body {
+        font-size: 3.625rem !important;
+    }
+}
+
+@media (min-width: 6220px) {
+    html, body {
+        font-size: 3.688rem !important;
+    }
+}
+
+@media (min-width: 6320px) {
+    html, body {
+        font-size: 3.75rem !important;
+    }
+}
+
+@media (min-width: 6420px) {
+    html, body {
+        font-size: 3.813rem !important;
+    }
+}
+
+@media (min-width: 6520px) {
+    html, body {
+        font-size: 3.875rem !important;
+    }
+}
+
+@media (min-width: 6620px) {
+    html, body {
+        font-size: 3.938rem !important;
+    }
+}
+
+@media (min-width: 6720px) {
+    html, body {
+        font-size: 4rem !important;
+    }
+}
+
+@media (min-width: 6800px) {
+    html {
+        font-size: 4.063rem !important;
+    }
+}
+
 @media (max-width: 1440px) {
     .container {
-        padding: 0 12px !important;
+        padding: 0 0.75rem !important;
     }
 
     .section {
         .main {
             .main-item {
                 .main-link {
+                    max-width: none;
+                    height: auto;
+                    width: auto;
+
                     img {
-                        max-width: 456px;
+                        max-width: 28.5rem;
                     }
                 }
             }
@@ -20,7 +312,7 @@
     .header {
         .header-item {
             position: relative;
-            gap: 20px;
+            gap: 1.25rem;
 
             .phone-nav {
                 display: block;
@@ -36,30 +328,48 @@
             }
 
             .phone-nav {
-                right: 15px;
+                right: 0.938rem;
             }
         }
 
         .phone-nav-mn {
             pointer-events: auto;
-            height: calc(100vh - 68px);
-            top: 68px;
+            height: calc(100vh - 4.25rem);
+            top: 4.25rem;
         }
     }
 
     .section {
         .main {
             .main-item {
-                gap: 16px;
+                gap: 1rem;
 
                 .main-link {
                     img {
-                        max-width: 322px;
+                        max-width: 20.125rem;
                     }
 
                     h2 {
-                        font-size: 25px;
+                        font-size: 1.563rem;
                         line-height: 1.2;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-meta {
+        .footer {
+            .footer-content {
+                .footer-block {
+                    .footer-item {
+                        h2 {
+                            font-size: 1.813rem;
+                        }
+
+                        li {
+                            height: auto;
+                        }
                     }
                 }
             }
@@ -74,7 +384,7 @@
 
             .main-title {
                 h1 {
-                    font-size: 52px;
+                    font-size: 3.25rem;
                 }
 
                 p br {
@@ -83,15 +393,15 @@
             }
 
             .main-item {
-                padding-top: 50px;
+                padding-top: 3.125rem;
 
                 .main-link {
                     img {
-                        max-width: 237px;
+                        max-width: 14.813rem;
                     }
 
                     h2 {
-                        font-size: 20px;
+                        font-size: 1.25rem;
                     }
                 }
             }
@@ -103,12 +413,12 @@
             .footer-content {
                 .footer-social {
                     flex-wrap: wrap;
-                    gap: 10px;
+                    gap: 0.625rem;
 
                     .phone {
                         .phone-item {
                             a {
-                                font-size: 20px;
+                                font-size: 1.25rem;
                             }
                         }
                     }
@@ -119,7 +429,7 @@
                         max-width: none;
 
                         h2 {
-                            font-size: 20px;
+                            font-size: 1.25rem;
                         }
                     }
                 }
@@ -132,7 +442,7 @@
             .header-item {
                 .header-item-img {
                     svg {
-                        height: 40px;
+                        height: 2.5rem;
                         width: auto;
                     }
                 }
@@ -147,7 +457,7 @@
             .header-item {
                 .phone-nav {
                     .lines {
-                        width: 25px;
+                        width: 1.563rem;
                     }
                 }
             }
@@ -156,18 +466,18 @@
 
     .section {
         .main {
-            padding-top: 50px;
+            padding-top: 3.125rem;
 
             .main-title {
                 h1 {
-                    font-size: 41px;
+                    font-size: 2.563rem;
                     line-height: 1.2;
                     text-align: center;
                 }
 
                 p {
-                    font-size: 16px;
-                    line-height: 20px;
+                    font-size: 1rem;
+                    line-height: 1.25;
                 }
             }
 
@@ -178,7 +488,7 @@
                     }
 
                     h2 {
-                        font-size: 35px;
+                        font-size: 2.188rem;
                     }
                 }
             }
@@ -186,16 +496,16 @@
     }
 
     .footer-meta {
-        padding-top: 50px !important;
+        padding-top: 3.125rem !important;
 
         .footer {
             .footer-content {
                 .footer-block {
                     flex-direction: column;
-                    gap: 15px;
+                    gap: 0.938rem;
 
                     .footer-item {
-                        border-bottom: 1px solid rgb(255 255 255);
+                        border-bottom: 0.063rem solid rgb(255 255 255);
                     }
                 }
 
@@ -203,13 +513,13 @@
                     .phone {
                         flex-direction: column;
                         align-items: flex-start;
-                        gap: 10px;
+                        gap: 0.625rem;
                     }
                 }
 
                 .foot-license {
                     flex-direction: column;
-                    gap: 10px;
+                    gap: 0.625rem;
                 }
             }
         }
@@ -220,7 +530,7 @@
     .content {
         .header {
             .header-item {
-                padding: 10px 0;
+                padding: 0.625rem 0;
             }
         }
     }
@@ -228,13 +538,13 @@
         .main {
             .main-title {
                 h1 {
-                    font-size: 36px;
+                    font-size: 2.25rem;
                     line-height: 1.2;
                 }
 
                 p {
-                    font-size: 16px;
-                    line-height: 20px;
+                    font-size: 1rem;
+                    line-height: 1.25rem;
                 }
             }
 
@@ -245,7 +555,7 @@
                     }
 
                     h2 {
-                        font-size: 34px;
+                        font-size: 2.125rem;
                     }
                 }
             }
@@ -257,16 +567,16 @@
     .content {
         .header {
             .header-item {
-                gap: 5px;
+                gap: 0.313rem;
 
                 .input-btn {
                     .dropdown {
                         .btn-item {
-                            padding: 8px 5px;
+                            padding: 0.5rem 0.313rem;
                         }
 
                         .dropdown-language {
-                            min-width: 55px;
+                            min-width: 3.438rem;
                         }
                     }
                 }
@@ -280,13 +590,13 @@
         .main {
             .main-title {
                 h1 {
-                    font-size: 30px;
+                    font-size: 1.875rem;
                     line-height: 1.2;
                 }
 
                 p {
-                    font-size: 14px;
-                    line-height: 20px;
+                    font-size: 0.875rem;
+                    line-height: 1.25rem;
                 }
             }
 
@@ -295,7 +605,7 @@
 
 
                     h2 {
-                        font-size: 29px;
+                        font-size: 1.813rem;
                     }
                 }
             }

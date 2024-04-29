@@ -1,7 +1,296 @@
+@media (min-width: 2020px) {
+    html, body {
+        font-size: 1.125rem !important;
+    }
+}
+
+@media (min-width: 2120px) {
+    html, body {
+        font-size: 1.188rem !important;
+    }
+}
+
+@media (min-width: 2220px) {
+    html, body {
+        font-size: 1.25rem !important;
+    }
+}
+
+@media (min-width: 2320px) {
+    html, body {
+        font-size: 1.313rem !important;
+    }
+}
+
+@media (min-width: 2420px) {
+    html, body {
+        font-size: 1.375rem !important;
+    }
+}
+
+@media (min-width: 2520px) {
+    html, body {
+        font-size: 1.438rem !important;
+    }
+}
+
+@media (min-width: 2620px) {
+    html, body {
+        font-size: 1.5rem !important;
+    }
+}
+
+@media (min-width: 2720px) {
+    html, body {
+        font-size: 1.563rem !important;
+    }
+}
+
+@media (min-width: 2820px) {
+    html, body {
+        font-size: 1.625rem !important;
+    }
+}
+
+@media (min-width: 2920px) {
+    html, body {
+        font-size: 1.688rem !important;
+    }
+}
+
+@media (min-width: 3020px) {
+    html, body {
+        font-size: 1.75rem !important;
+    }
+}
+
+@media (min-width: 3120px) {
+    html, body {
+        font-size: 1.813rem !important;
+    }
+}
+
+@media (min-width: 3220px) {
+    html, body {
+        font-size: 1.875rem !important;
+    }
+}
+
+@media (min-width: 3320px) {
+    html, body {
+        font-size: 1.938rem !important;
+    }
+}
+
+@media (min-width: 3420px) {
+    html, body {
+        font-size: 2rem !important;
+    }
+}
+
+@media (min-width: 3520px) {
+    html, body {
+        font-size: 2.063rem !important;
+    }
+}
+
+@media (min-width: 3620px) {
+    html {
+        font-size: 2.125rem !important;
+    }
+}
+
+@media (min-width: 3720px) {
+    html, body {
+        font-size: 2.188rem !important;
+    }
+}
+
+@media (min-width: 3820px) {
+    html, body {
+        font-size: 2.25rem !important;
+    }
+}
+
+@media (min-width: 3920px) {
+    html, body {
+        font-size: 2.313rem !important;
+    }
+}
+
+@media (min-width: 4020px) {
+    html, body {
+        font-size: 2.375rem !important;
+    }
+}
+
+@media (min-width: 4120px) {
+    html, body {
+        font-size: 2.438rem !important;
+    }
+}
+
+@media (min-width: 4220px) {
+    html, body {
+        font-size: 2.5rem !important;
+    }
+}
+
+@media (min-width: 4320px) {
+    html, body {
+        font-size: 2.563rem !important;
+    }
+}
+
+@media (min-width: 4420px) {
+    html, body {
+        font-size: 2.625rem !important;
+    }
+}
+
+@media (min-width: 4520px) {
+    html, body {
+        font-size: 2.688rem !important;
+    }
+}
+
+@media (min-width: 4620px) {
+    html, body {
+        font-size: 2.75rem !important;
+    }
+}
+
+@media (min-width: 4720px) {
+    html, body {
+        font-size: 2.813rem !important;
+    }
+}
+
+@media (min-width: 4820px) {
+    html, body {
+        font-size: 2.875rem !important;
+    }
+}
+
+@media (min-width: 4920px) {
+    html, body {
+        font-size: 2.938rem !important;
+    }
+}
+
+@media (min-width: 5020px) {
+    html, body {
+        font-size: 3rem !important;
+    }
+}
+
+@media (min-width: 5120px) {
+    html, body {
+        font-size: 3.063rem !important;
+    }
+}
+
+@media (min-width: 5220px) {
+    html, body {
+        font-size: 3.125rem !important;
+    }
+}
+
+@media (min-width: 5320px) {
+    html, body {
+        font-size: 3.188rem !important;
+    }
+}
+
+@media (min-width: 5420px) {
+    html, body {
+        font-size: 3.25rem !important;
+    }
+}
+
+@media (min-width: 5620px) {
+    html, body {
+        font-size: 3.313rem !important;
+    }
+}
+
+@media (min-width: 5720px) {
+    html, body {
+        font-size: 3.375rem !important;
+    }
+}
+
+@media (min-width: 5820px) {
+    html, body {
+        font-size: 3.438rem !important;
+    }
+}
+
+@media (min-width: 5920px) {
+    html, body {
+        font-size: 3.5rem !important;
+    }
+}
+
+@media (min-width: 6020px) {
+    html, body {
+        font-size: 3.563rem !important;
+    }
+}
+
+@media (min-width: 6120px) {
+    html, body {
+        font-size: 3.625rem !important;
+    }
+}
+
+@media (min-width: 6220px) {
+    html, body {
+        font-size: 3.688rem !important;
+    }
+}
+
+@media (min-width: 6320px) {
+    html, body {
+        font-size: 3.75rem !important;
+    }
+}
+
+@media (min-width: 6420px) {
+    html, body {
+        font-size: 3.813rem !important;
+    }
+}
+
+@media (min-width: 6520px) {
+    html, body {
+        font-size: 3.875rem !important;
+    }
+}
+
+@media (min-width: 6620px) {
+    html, body {
+        font-size: 3.938rem !important;
+    }
+}
+
+@media (min-width: 6720px) {
+    html, body {
+        font-size: 4rem !important;
+    }
+}
+
+@media (min-width: 6800px) {
+    html {
+        font-size: 4.063rem !important;
+    }
+}
+
 @media (max-width: 1440px) {
     .container {
-        padding: 0 12px !important;
+        padding: 0 0.75rem !important;
     }
+
     .content {
         .section {
             .lithium {
@@ -66,6 +355,24 @@
                         .decision-inner {
                             .decision-select {
                                 max-width: 250px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .footer-meta {
+            .footer {
+                .footer-content {
+                    .footer-block {
+                        .footer-item {
+                            h2 {
+                                font-size: 1.813rem;
+                            }
+
+                            li {
+                                height: auto;
                             }
                         }
                     }
