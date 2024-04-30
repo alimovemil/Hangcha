@@ -638,11 +638,19 @@ document.addEventListener("DOMContentLoaded", function() {
     if (openModalBtn && modal) {
         openModalBtn.onclick = function () {
             modal.style.display = "block";
+            setTimeout(function() {
+                modal.style.opacity = "1";
+                modal.style.pointerEvents = "auto";
+            }, 10);
         }
 
         modal.onclick = function (event) {
             if (event.target === modal) {
-                modal.style.display = "none";
+                modal.style.opacity = "0";
+                modal.style.pointerEvents = "none";
+                setTimeout(function() {
+                    modal.style.display = "none";
+                }, 300);
             }
         }
     }

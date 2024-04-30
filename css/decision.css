@@ -640,6 +640,7 @@ ul {
         width: 100%;
         background: rgba(0, 0, 0, 0.1);
         display: block;
+        color: #000000 !important;
     }
 
     input::-webkit-input-placeholder {

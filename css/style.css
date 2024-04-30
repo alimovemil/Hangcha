@@ -692,7 +692,7 @@ ul {
         max-width: 13.063rem;
         width: 100%;
         font-size: 1rem;
-        color: #FFFFFF;
+        color: #FFFFFF !important;
         background: rgba(255, 255, 255, 0.1);
     }
 

@@ -630,6 +630,7 @@ ul {
         padding: 0.5rem 0.75rem 0.5rem 2.875rem;
         max-width: 13.063rem;
         width: 100%;
+        color: #000000 !important;
         background: rgba(0, 0, 0, 0.1);
         display: block;
     }
